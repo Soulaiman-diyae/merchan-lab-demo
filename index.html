@@ -11,10 +11,10 @@
 <meta property="og:locale" content="fr_MA">
 <meta property="og:image" content="https://images.unsplash.com/photo-1614308460927-5024ba2e1dcb?w=1200&h=630&q=80&auto=format&fit=crop">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231565E0'/%3E%3Cpath d='M9 23V10l7 8 7-8v13' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='25' cy='25' r='3' fill='%23F08A35'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="assets/mark-merchan.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@800&family=Instrument+Sans:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 <style>
   /* ---------------------------------------------------------
@@ -30,10 +30,10 @@
     --bg:#FFFFFF; --card:#F4F7FD; --paper:#FFFFFF; --raised:#E9EFFA;
     --text:#0E1A2E; --text-2:#475670; --muted:#6A7890;
     --line:rgba(14,26,46,.08); --line-2:rgba(14,26,46,.15);
-    /* Blue: the lab's royal blue, main colour */
-    --accent:#1565E0; --accent-ink:#0F4FB5; --accent-soft:#E6EEFB;
+    /* Blue and orange taken from the lab's logo */
+    --accent:#2347A8; --accent-ink:#1B3888; --accent-soft:#E7ECF8;
     /* Orange: second colour, for highlights and numbers */
-    --orange:#F08A35; --orange-ink:#B85A12; --orange-soft:#FEF0E4;
+    --orange:#E8742A; --orange-ink:#B5541A; --orange-soft:#FDEEE3;
     /* Tube caps (standard collection tube colours) */
     --cap-violet:#7B5EA7; --cap-yellow:#D9A92E; --cap-blue:#4A8BD6; --cap-grey:#9A9A96; --cap-red:#C8463D;
     /* Navy surfaces */
@@ -83,8 +83,11 @@
   /* ---------- Navigation: quiet bar ---------- */
   .nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
   .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:64px}
-  .logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:17px;line-height:1;color:var(--text)}
-  .logo svg{width:28px;height:28px;flex:none}
+  .logo{display:flex;align-items:center;gap:10px;line-height:1}
+  .logo-mark{width:40px;height:44px;flex:none}
+  .logo-word{display:flex;flex-direction:column;gap:2px;font-family:"Big Shoulders Stencil Display","Arial Narrow",sans-serif;font-weight:800}
+  .logo-word .l1{font-size:20px;color:var(--accent)}
+  .logo-word .l2{font-size:16px;letter-spacing:.42em;color:var(--orange)}
   .menu{display:flex;gap:28px;font-size:15px;color:var(--text-2)}
   .menu a{transition:color .15s var(--ease)}
   .menu a:hover,.menu a[aria-current="true"]{color:var(--text)}
@@ -118,7 +121,7 @@
   .report{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:24px;position:relative}
   .rep-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--line)}
   .rep-head .t{font-weight:500}
-  .rep-head svg{width:28px;height:28px;flex:none}
+  .rep-logo{width:36px;height:40px;flex:none}
   .rep-meta{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;padding:16px 0;border-bottom:1px solid var(--line)}
   .rep-meta b{display:block;font-weight:500;color:var(--text);font-size:14px;line-height:20px}
   .rep-rows{list-style:none;padding:8px 0}
@@ -318,7 +321,8 @@
   /* Footer */
   footer{background:var(--deep);color:var(--deep-2);padding:64px 0 24px;font-size:14px;line-height:20px}
   .f-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(239,233,222,.12)}
-  footer .logo{color:var(--deep-text)}
+  footer .logo{--mk-blue:#FFFFFF;--mk-ring:var(--deep)}
+  footer .logo-word .l1{color:#fff}
   .ar-name{direction:rtl;color:var(--deep-text);font-size:18px;line-height:28px}
   .f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding:40px 0 48px}
   footer h4{color:var(--deep-text);font-weight:500;font-size:15px;margin-bottom:12px}
@@ -405,13 +409,22 @@
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <!-- Flat mark built from the lab's sign: blue tile, white M, red dot. Swap for the real logo file. -->
-    <symbol id="mark" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="var(--accent)"/><path d="M9 23V10l7 8 7-8v13" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25" cy="25" r="3" style="fill:var(--orange)"/></symbol>
+    <symbol id="mark" viewBox="36 28 400 440"><g style="fill:var(--mk-blue,#2347A8)">
+  <g transform="translate(128 60) rotate(51.3)"><rect x="-8" y="-25" width="16" height="50" rx="5"/><rect x="6" y="-13" width="22" height="26"/><rect x="24" y="-29" width="168" height="58" rx="16"/></g>
+  <rect x="200" y="378" width="206" height="16" rx="4"/>
+  <path d="M246 393c14 8 15 24 2 33h56c-13-9-12-25 2-33z"/>
+  <rect x="62" y="424" width="344" height="38" rx="4"/>
+</g>
+<path d="M150 130C70 150 46 262 90 334c24 40 64 66 112 70" fill="none" style="stroke:var(--mk-blue,#2347A8)" stroke-width="32" stroke-linecap="round"/>
+<circle cx="150" cy="134" r="28" style="fill:var(--mk-ring,#fff)"/>
+<circle cx="150" cy="134" r="18" style="fill:var(--mk-orange,#E8742A)"/>
+<path d="M204 354c28-24 46-64 68-72 17-6 22 13 13 35l-11 32M280 330c25-44 47-66 68-64 19 2 17 28 9 52-5 16-1 27 18 23 14-3 27-12 37-20" fill="none" style="stroke:var(--mk-orange,#E8742A)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </defs>
 </svg>
 
 <header class="nav">
   <div class="wrap">
-    <a href="#top" class="logo" aria-label="Laboratoire Merchan, retour en haut"><svg aria-hidden="true"><use href="#mark"/></svg>Laboratoire Merchan</a>
+    <a href="#top" class="logo" aria-label="Laboratoire Merchan, retour en haut"><svg class="logo-mark" aria-hidden="true"><use href="#mark"/></svg><span class="logo-word" aria-hidden="true"><span class="l1">LABORATOIRE</span><span class="l2">MERCHAN</span></span></a>
     <nav class="menu" aria-label="Navigation principale">
       <a href="#analyses">Analyses</a>
       <a href="#laboratoire">Le laboratoire</a>
@@ -462,7 +475,7 @@
       <span class="sample">Exemple</span>
       <div class="rep-head">
         <div><div class="t">Compte rendu d'analyses</div><div class="meta mono">Dossier 2611 0417</div></div>
-        <svg aria-hidden="true"><use href="#mark"/></svg>
+        <svg class="rep-logo" aria-hidden="true"><use href="#mark"/></svg>
       </div>
       <div class="rep-meta">
         <div class="meta">Patiente<b>Salma Idrissi</b></div>
@@ -748,7 +761,7 @@
 <footer>
   <div class="wrap">
     <div class="f-top">
-      <a href="#top" class="logo"><svg aria-hidden="true"><use href="#mark"/></svg>Laboratoire Merchan</a>
+      <a href="#top" class="logo" aria-label="Laboratoire Merchan"><svg class="logo-mark" aria-hidden="true"><use href="#mark"/></svg><span class="logo-word" aria-hidden="true"><span class="l1">LABORATOIRE</span><span class="l2">MERCHAN</span></span></a>
       <p class="ar-name">مختبر مرشان للتحاليل الطبية</p>
     </div>
     <div class="f-grid">
