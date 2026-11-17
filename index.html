@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laboratoire Merchan · Analyses médicales à Tanger</title>
+<meta name="description" content="Laboratoire Merchan d'analyses médicales, avenue Hassan II, Résidence Rouaim, Tanger. Prises de sang dès 07:30 en semaine, salle Mère et Enfant, résultats expliqués par le biologiste.">
+<meta property="og:title" content="Laboratoire Merchan · Analyses médicales à Tanger">
+<meta property="og:description" content="Vos analyses à Tanger, expliquées par votre biologiste. Avenue Hassan II. 05 39 93 99 20.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_MA">
+<meta property="og:image" content="https://images.unsplash.com/photo-1614308460927-5024ba2e1dcb?w=1200&h=630&q=80&auto=format&fit=crop">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231565E0'/%3E%3Cpath d='M9 23V10l7 8 7-8v13' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='25' cy='25' r='3' fill='%23F08A35'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<style>
+  /* ---------------------------------------------------------
+     Direction
+     Product   A neighbourhood analysis lab in Merchan, Tangier, where the biologist explains your results
+     Character careful, reassuring, local
+     World     the reception counter (white and warm wood), the royal blue sign, the printed results report, tube caps
+     Moments   the results report in the hero; tube cap colours on the analyses
+     Signature a dot in the real cap colour of each collection tube
+     --------------------------------------------------------- */
+  :root{
+    /* Palette: blue first, orange second, white as the base */
+    --bg:#FFFFFF; --card:#F4F7FD; --paper:#FFFFFF; --raised:#E9EFFA;
+    --text:#0E1A2E; --text-2:#475670; --muted:#6A7890;
+    --line:rgba(14,26,46,.08); --line-2:rgba(14,26,46,.15);
+    /* Blue: the lab's royal blue, main colour */
+    --accent:#1565E0; --accent-ink:#0F4FB5; --accent-soft:#E6EEFB;
+    /* Orange: second colour, for highlights and numbers */
+    --orange:#F08A35; --orange-ink:#B85A12; --orange-soft:#FEF0E4;
+    /* Tube caps (standard collection tube colours) */
+    --cap-violet:#7B5EA7; --cap-yellow:#D9A92E; --cap-blue:#4A8BD6; --cap-grey:#9A9A96; --cap-red:#C8463D;
+    /* Navy surfaces */
+    --deep:#0E1A2E; --deep-text:#F2F5FA; --deep-2:#A6B5D0;
+    --shadow:0 8px 24px rgba(14,26,46,.07);
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Instrument Sans",system-ui,sans-serif;font-size:16px;line-height:24px;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+  h1,h2,h3{font-weight:500;color:var(--text);text-wrap:balance}
+  p,li{text-wrap:pretty}
+  .mono{font-family:"Geist Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+  .wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+  .ph{font-size:18px;line-height:1}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+  .skip{position:absolute;left:16px;top:-48px;z-index:100;background:var(--text);color:#fff;padding:8px 12px;border-radius:8px;font-size:14px;transition:transform .15s var(--ease)}
+  .skip:focus{transform:translateY(64px)}
+  .todo{display:inline-block;padding:0 4px;border:1px dashed var(--line-2);border-radius:4px;color:var(--muted);font-size:13px;white-space:nowrap}
+
+  /* Type */
+  .h-hero{font-size:64px;line-height:66px;letter-spacing:-.03em}
+  .h-sec{font-size:40px;line-height:44px;letter-spacing:-.02em}
+  .h-big{font-size:48px;line-height:52px;letter-spacing:-.02em;font-weight:400}
+  .lead{font-size:18px;line-height:28px;color:var(--text-2);max-width:36rem}
+  .small{font-size:14px;line-height:20px}
+  .meta{font-size:13px;line-height:20px;color:var(--muted)}
+  .sec-sub{color:var(--text-2);max-width:32rem;margin-top:12px}
+
+  /* Buttons: radius by size, colour step on hover, tiny press */
+  .btn{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 20px;border-radius:8px;font-weight:500;white-space:nowrap;border:1px solid transparent;transition:background-color .15s var(--ease),border-color .15s var(--ease),color .15s var(--ease),transform .15s var(--ease)}
+  .btn .ph{transition:transform .15s var(--ease)}
+  .btn:hover .ph-arrow-right{transform:translateX(2px)}
+  .btn:active{transform:scale(.98)}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn.primary:hover{background:var(--accent-ink)}
+  .btn.secondary{background:#fff;border-color:color-mix(in srgb,var(--orange) 55%,transparent);color:var(--text)}
+  .btn.secondary .ph{color:var(--orange-ink)}
+  .btn.secondary:hover{background:var(--orange-soft);border-color:var(--orange)}
+  .btn.sm{height:36px;padding:0 16px;font-size:14px}
+  .btn[aria-busy="true"]{opacity:.7;pointer-events:none}
+
+  /* ---------- Navigation: quiet bar ---------- */
+  .nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:64px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:17px;line-height:1;color:var(--text)}
+  .logo svg{width:28px;height:28px;flex:none}
+  .menu{display:flex;gap:28px;font-size:15px;color:var(--text-2)}
+  .menu a{transition:color .15s var(--ease)}
+  .menu a:hover,.menu a[aria-current="true"]{color:var(--text)}
+  .menu a[aria-current="true"]{text-decoration:underline;text-decoration-color:var(--orange);text-decoration-thickness:2px;text-underline-offset:8px}
+  .nav-r{display:flex;align-items:center;gap:8px}
+  .icon-btn{width:36px;height:36px;border-radius:8px;display:none;place-items:center;color:var(--text);border:1px solid var(--line-2);background:var(--card)}
+  .toggle{position:relative}
+  .toggle i{position:absolute;left:10px;right:10px;height:1.5px;border-radius:2px;background:var(--text);transition:transform .2s var(--ease)}
+  .toggle i:first-child{top:14px}
+  .toggle i:last-child{top:20px}
+  .toggle[aria-expanded="true"] i:first-child{transform:translateY(3px) rotate(45deg)}
+  .toggle[aria-expanded="true"] i:last-child{transform:translateY(-3px) rotate(-45deg)}
+  .panel{position:fixed;inset:64px 0 0;z-index:40;background:var(--bg);padding:24px 16px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .2s var(--ease),transform .2s var(--ease),visibility 0s linear .2s}
+  .panel.open{opacity:1;visibility:visible;transform:none;transition:opacity .2s var(--ease),transform .2s var(--ease)}
+  .panel ul{list-style:none}
+  .panel a:not(.btn){display:block;padding:16px 0;border-bottom:1px solid var(--line);font-size:24px;line-height:32px}
+  .panel .btn{margin-top:24px;width:100%;justify-content:center}
+
+  /* ---------- Hero: split, one solid visual ---------- */
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:64px;align-items:center;min-height:min(760px,calc(100svh - 64px));padding:48px 0}
+  .status{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-bottom:24px;font-size:14px;line-height:20px;color:var(--text-2)}
+  .status span{display:inline-flex;align-items:center;gap:8px}
+  .dot{width:8px;height:8px;border-radius:9999px;background:#16A34A}
+  .dot.closed{background:#B7791F}
+  .sep{width:1px;height:12px;background:var(--line-2)}
+  .hero h1{max-width:600px}
+  .hero .lead{margin:24px 0 32px}
+  .actions{display:flex;flex-wrap:wrap;gap:12px}
+
+  /* The moment: results report */
+  .report{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:24px;position:relative}
+  .rep-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+  .rep-head .t{font-weight:500}
+  .rep-head svg{width:28px;height:28px;flex:none}
+  .rep-meta{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .rep-meta b{display:block;font-weight:500;color:var(--text);font-size:14px;line-height:20px}
+  .rep-rows{list-style:none;padding:8px 0}
+  .rep-row{display:grid;grid-template-columns:12px 1fr 88px 104px;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+  .rep-row:last-child{border-bottom:0}
+  .rep-row .name{font-size:14px;line-height:20px}
+  .rep-row .ref{display:block;font-size:12px;line-height:16px;color:var(--muted)}
+  .rep-row .val{font-size:14px;text-align:right;color:var(--text)}
+  .rep-row .val small{color:var(--muted);font-size:11px}
+  .cap{width:10px;height:10px;border-radius:9999px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+  .cap.violet{background:var(--cap-violet)} .cap.yellow{background:var(--cap-yellow)} .cap.blue{background:var(--cap-blue)}
+  .cap.grey{background:var(--cap-grey)} .cap.red{background:var(--cap-red)} .cap.sterile{background:#fff;box-shadow:inset 0 0 0 1.5px var(--muted)}
+  .range{position:relative;height:6px;border-radius:9999px;background:var(--raised)}
+  .range .ok{position:absolute;top:0;bottom:0;border-radius:9999px;background:color-mix(in srgb,#16A34A 22%,var(--raised))}
+  .range .mk{position:absolute;top:50%;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:9999px;background:var(--text);box-shadow:0 0 0 2px var(--paper)}
+  .rep-row.flag .val{color:var(--orange-ink)}
+  .rep-row.flag .mk{background:var(--orange)}
+  .note .who .ph{color:var(--orange-ink)}
+  .h-hero em{font-style:normal;color:var(--accent)}
+  .note{background:var(--raised);border-radius:8px;padding:12px 16px;margin-top:8px}
+  .note .who{display:flex;align-items:center;gap:8px;font-size:13px;line-height:20px;color:var(--text-2);margin-bottom:4px}
+  .note p{font-size:14px;line-height:20px}
+  .sample{position:absolute;top:-12px;right:24px;background:var(--text);color:var(--card);font-size:12px;line-height:16px;padding:4px 8px;border-radius:4px}
+
+  /* ---------- Facts ---------- */
+  .facts{border-block:1px solid var(--line);background:var(--card)}
+  .facts ul{list-style:none;display:flex;flex-wrap:wrap;gap:12px 40px;padding:20px 0;font-size:14px;line-height:20px;color:var(--text-2)}
+  .facts li{display:flex;align-items:center;gap:8px}
+  .facts .ph{color:#FFB877}
+  .facts{background:var(--accent);border-color:var(--accent)}
+  .facts ul{color:#fff}
+
+  /* ---------- Sections ---------- */
+  .sec{padding:96px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+
+  /* About */
+  .about .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
+  .about p.body{color:var(--text-2);margin-top:16px;max-width:34rem}
+  .checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;margin-top:32px}
+  .checks li{display:flex;gap:10px}
+  .checks .ph{color:var(--orange-ink);margin-top:3px}
+  .checks b{display:block;font-weight:500}
+  .checks span span{font-size:14px;line-height:20px;color:var(--text-2)}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px}
+  .stat .fig{font-size:32px;line-height:32px;font-weight:500}
+  .stat .fig.accent{color:var(--accent-ink)}
+  .stat .fig.orange{color:var(--orange-ink)}
+  .stat .lbl{font-size:14px;line-height:20px;color:var(--text-2)}
+  .stat.wide{grid-column:1/3;flex-direction:row;align-items:center;justify-content:space-between;gap:24px}
+  .stat.wide p{font-size:14px;line-height:20px;color:var(--text-2);max-width:20rem}
+
+  /* Tagline reveal */
+  .tagline{padding:96px 0;background:var(--accent);color:#fff}
+  .tagline p{max-width:720px;color:#fff}
+  .tagline .src.meta{color:#FFD2AE}
+  .tagline .w{opacity:.28;transition:opacity .4s var(--ease)}
+  .tagline .w.on{opacity:1}
+  .tagline .src{margin-top:24px}
+
+  /* Analyses list */
+  .services{background:var(--card);border-block:1px solid var(--line)}
+  .legend{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .legend .caps{display:inline-flex;gap:4px}
+  .svc{list-style:none;border-top:1px solid var(--line-2)}
+  .svc li{border-bottom:1px solid var(--line-2)}
+  .svc a{display:grid;grid-template-columns:40px minmax(0,1fr) 200px 20px;gap:24px;align-items:center;padding:24px 0}
+  .svc .n{color:var(--orange-ink);font-size:13px;align-self:start;padding-top:6px}
+  .svc h3{font-size:28px;line-height:36px;font-weight:400;letter-spacing:-.01em;transition:color .15s var(--ease)}
+  .svc .ex{color:var(--text-2);margin-top:4px;font-size:15px;line-height:22px}
+  .svc .tube{display:flex;flex-direction:column;gap:6px;font-size:12px;line-height:16px;color:var(--muted)}
+  .svc .tube span{display:flex;align-items:center;gap:8px}
+  .svc .go{color:var(--muted);transition:color .15s var(--ease),transform .15s var(--ease)}
+  .svc a:hover h3{color:var(--accent-ink)}
+  .svc a:hover .go{color:var(--accent-ink);transform:translateX(2px)}
+  .svc-foot{margin-top:32px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+
+  /* Patients' words (dark warm band) */
+  .band{display:grid;grid-template-columns:1fr 1fr;background:var(--deep);color:var(--deep-text)}
+  .band-photo{min-height:560px;background:#2a2622}
+  .band-photo img{width:100%;height:100%;object-fit:cover}
+  .band-body{padding:80px 64px;display:flex;flex-direction:column;justify-content:center}
+  .band-body h2{color:var(--deep-text);max-width:28rem}
+  .quotes{list-style:none;margin-top:40px;border-top:1px solid rgba(239,233,222,.12)}
+  .quotes li{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid rgba(239,233,222,.12)}
+  .quotes .n{color:var(--orange);font-size:13px;padding-top:2px}
+  .quotes b{display:block;font-weight:500}
+  .quotes q,.quotes p{display:block;color:var(--deep-2);font-size:15px;line-height:22px;margin-top:4px}
+
+  /* How it works */
+  .how .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+  .how .lead{margin:16px 0 32px}
+  .steps{list-style:none;border-top:1px solid var(--line-2)}
+  .steps li{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:24px 0;border-bottom:1px solid var(--line-2)}
+  .steps .n{color:var(--orange-ink);font-size:13px;padding-top:4px}
+  .steps h3{font-size:20px;line-height:28px}
+  .steps p{color:var(--text-2);margin-top:4px}
+
+  /* Reviews */
+  .people{border-top:1px solid var(--line)}
+  .people-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+  .doc,.review{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+  .av{width:48px;height:48px;border-radius:9999px;background:var(--accent-soft);color:var(--accent-ink);display:grid;place-items:center;font-weight:500}
+  .doc h3{font-size:20px;line-height:28px;margin-top:16px}
+  .review p{font-size:17px;line-height:26px}
+  .review .who{display:flex;justify-content:space-between;gap:12px;font-size:14px;line-height:20px}
+  .score{grid-column:1/4;display:flex;align-items:center;gap:24px;flex-wrap:wrap;background:var(--deep);color:var(--deep-text);border-radius:16px;padding:20px 24px}
+  .score .fig{color:var(--orange)}
+  .score .meta{color:var(--deep-2)}
+  .score .btn.secondary{background:transparent;color:#fff}
+  .score .btn.secondary:hover{background:rgba(240,138,53,.14)}
+  .score .btn.secondary .ph{color:var(--orange)}
+  .score .fig{font-size:32px;line-height:32px;font-weight:500}
+  .score .btn{margin-left:auto}
+
+  /* FAQ */
+  .faq .wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:64px}
+  .faq .aside p{color:var(--text-2);margin:16px 0 24px;max-width:24rem}
+  details{border-bottom:1px solid var(--line-2)}
+  details:first-child{border-top:1px solid var(--line-2)}
+  summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-size:18px;line-height:28px;font-weight:500}
+  summary::-webkit-details-marker{display:none}
+  summary .ph{color:var(--muted);transition:transform .2s var(--ease)}
+  details[open] summary .ph{transform:rotate(45deg)}
+  details p{color:var(--text-2);padding-bottom:20px;max-width:40rem}
+
+  /* Contact */
+  .contact{background:var(--card);border-top:1px solid var(--line)}
+  .contact-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:center}
+  .contact .phone{display:inline-block;font-size:32px;line-height:40px;font-weight:500;color:var(--accent-ink);margin:16px 0 24px}
+  .addr{display:flex;gap:10px;color:var(--text-2);margin-bottom:24px}
+  .addr .ph{color:var(--orange-ink);margin-top:3px}
+  .hours{list-style:none;border-top:1px solid var(--line-2)}
+  .hours li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line-2);font-size:15px}
+  .hours b{font-weight:500}
+  .form{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:32px}
+  .form h3{font-size:24px;line-height:32px}
+  .form > p{color:var(--text-2);margin:8px 0 24px}
+  .field{display:grid;gap:8px;margin-bottom:16px;border:0}
+  .field label,.field legend{font-size:14px;line-height:20px;font-weight:500}
+  .field input,.field textarea{font:inherit;color:var(--text);background:var(--paper);border:1px solid var(--line-2);border-radius:8px;padding:10px 12px;transition:border-color .15s var(--ease)}
+  .field input:hover,.field textarea:hover{border-color:rgba(31,27,22,.28)}
+  .field input:focus-visible,.field textarea:focus-visible{outline:2px solid var(--accent);outline-offset:0;border-color:var(--accent)}
+  .field [aria-invalid="true"]{border-color:#DC2626}
+  .err{color:#B91C1C;font-size:13px;line-height:16px;min-height:16px}
+  .choices{display:flex;gap:8px;flex-wrap:wrap}
+  .choice input{position:absolute;opacity:0}
+  .choice span{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 12px;border:1px solid var(--line-2);border-radius:8px;cursor:pointer;font-size:14px;transition:background-color .15s var(--ease),border-color .15s var(--ease)}
+  .choice span .ph{color:var(--muted)}
+  .choice input:checked + span{background:var(--accent-soft);border-color:var(--accent)}
+  .choice input:focus-visible + span{outline:2px solid var(--accent);outline-offset:2px}
+  .form .btn{width:100%;justify-content:center;margin-top:8px}
+  .reassure{display:flex;gap:8px;margin-top:16px}
+  .done{display:none;gap:10px;border-radius:8px;background:var(--raised);padding:12px 16px;margin-top:16px;font-size:14px;line-height:20px}
+  .done.show{display:flex}
+  .done .ph{color:#16A34A;margin-top:1px}
+  .landmarks{list-style:none;display:grid;gap:12px;margin-top:24px;font-size:15px;line-height:22px;color:var(--text-2)}
+  .landmarks li{display:flex;gap:10px}
+  .landmarks .ph{color:var(--orange-ink);margin-top:2px}
+  .landmarks b{font-weight:500;color:var(--text)}
+
+  /* Neighbourhood map: navy streets, orange avenue, red pin (the one rich moment of this section) */
+  .map{position:relative;border-radius:16px;overflow:hidden;background:#0E1A2E;aspect-ratio:960/688}
+  .mapsvg{display:block;width:100%;height:100%}
+  .m-bg{fill:#0E1A2E}
+  .m-park{fill:#15304A;stroke:#1D3D5C;stroke-width:1}
+  .mapsvg path[class^="r-"]{fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .r-foot{stroke:#1A2A44;stroke-width:1.2}
+  .r-min{stroke:#1F3150;stroke-width:2}
+  .r-res{stroke:#2A4066;stroke-width:3.5}
+  .r-sec{stroke:#3F5C8C;stroke-width:6}
+  .r-main{stroke:#E8873A;stroke-width:10}
+  .mapsvg text{font-family:"Instrument Sans",system-ui,sans-serif}
+  .rl{font-size:19px;font-weight:500;fill:#9FB3D6}
+  .rl-main{fill:#F4B27A;font-size:21px}
+  .hood{font-size:22px;font-weight:500;fill:#5E7499;letter-spacing:.06em}
+  .poi circle{fill:#0E1A2E;stroke:#9FB3D6;stroke-width:2.5}
+  .poi text{font-size:19px;font-weight:500;fill:#DCE4F2;paint-order:stroke;stroke:#0E1A2E;stroke-width:5px;stroke-linejoin:round}
+  .pin-ring{fill:rgba(229,57,43,.14);stroke:rgba(229,57,43,.55);stroke-width:2}
+  .pin-body{fill:#2F7BF0;stroke:#fff;stroke-width:2.5}
+  .pin-dot{fill:#0E1A2E}
+  .chip rect{fill:#0B1424;stroke:rgba(220,228,242,.22);stroke-width:1.5}
+  .chip circle{fill:var(--orange)}
+  .chip text{font-size:20px;font-weight:600;fill:#fff}
+  .scale path{fill:none;stroke:#7F93B8;stroke-width:2}
+  .scale text,.north text{font-family:"Geist Mono",monospace;font-size:16px;fill:#7F93B8}
+  .north circle{fill:#0B1424;stroke:rgba(220,228,242,.22);stroke-width:1.5}
+  .north path{fill:#E8873A}
+  .map-open{position:absolute;top:16px;right:16px;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px;border-radius:8px;background:rgba(11,20,36,.86);border:1px solid rgba(232,135,58,.6);color:#F4B27A;font-size:14px;font-weight:500;transition:background-color .15s var(--ease),border-color .15s var(--ease)}
+  .map-open:hover{background:#0B1424;border-color:#E8873A}
+  .map-credit{position:absolute;left:16px;bottom:8px;font-size:11px;line-height:16px;color:#5E7499}
+
+  .callback{display:grid;grid-template-columns:1fr 1.25fr;gap:64px;align-items:start;margin-top:96px;padding-top:64px;border-top:1px solid var(--line-2)}
+  .callback-intro p{color:var(--text-2);margin-top:16px;max-width:26rem}
+
+  /* Footer */
+  footer{background:var(--deep);color:var(--deep-2);padding:64px 0 24px;font-size:14px;line-height:20px}
+  .f-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(239,233,222,.12)}
+  footer .logo{color:var(--deep-text)}
+  .ar-name{direction:rtl;color:var(--deep-text);font-size:18px;line-height:28px}
+  .f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding:40px 0 48px}
+  footer h4{color:var(--deep-text);font-weight:500;font-size:15px;margin-bottom:12px}
+  footer ul{list-style:none;display:grid;gap:8px}
+  footer a,footer button{transition:color .15s var(--ease)}
+  footer a:hover,footer button:hover{color:var(--deep-text)}
+  .f-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
+  .f-bottom nav{display:flex;gap:24px}
+  .f-bottom button{color:inherit;text-decoration:underline;text-underline-offset:4px}
+
+  /* Legal dialog */
+  dialog{margin:auto;max-width:min(600px,100% - 32px);border:1px solid var(--line);border-radius:16px;padding:32px;background:var(--card);color:var(--text);box-shadow:var(--shadow)}
+  dialog::backdrop{background:rgba(31,27,22,.4)}
+  dialog h2{font-size:24px;line-height:32px;margin-bottom:16px}
+  dialog h3{font-size:16px;margin:24px 0 8px}
+  dialog p{color:var(--text-2);font-size:15px;line-height:22px}
+  dialog .close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:8px;display:grid;place-items:center;color:var(--muted)}
+  dialog .close:hover{background:var(--raised)}
+
+  /* WhatsApp + demo palette switcher */
+  .wa{position:fixed;right:16px;bottom:16px;z-index:30;width:52px;height:52px;border-radius:9999px;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:var(--shadow);transition:transform .15s var(--ease)}
+  .wa .ph{font-size:24px}
+  .wa:active{transform:scale(.97)}
+
+  /* One entrance on load */
+  .enter{opacity:0;transform:translateY(8px);animation:enter .5s var(--ease) forwards}
+  .enter:nth-child(2){animation-delay:60ms}
+  @keyframes enter{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .enter{animation:none;opacity:1;transform:none}
+    .tagline .w{opacity:1;transition:none}
+    *{transition-duration:.01ms!important}
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:1080px){
+    .h-hero{font-size:56px;line-height:58px}
+    .hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:48px}
+  }
+  @media (max-width:960px){
+    .menu,.nav-r .btn{display:none}
+    .icon-btn{display:grid}
+    .hero .wrap,.about .wrap,.how .wrap,.contact-grid,.faq .wrap,.callback{grid-template-columns:1fr}
+    .callback{gap:24px;margin-top:64px;padding-top:48px}
+    .hero .wrap{min-height:0;padding:48px 0 64px}
+    .band{grid-template-columns:1fr}
+    .band-photo{min-height:320px}
+    .band-body{padding:64px 24px}
+    .people-grid{grid-template-columns:1fr 1fr}
+    .score{grid-column:1/3}
+  }
+  @media (max-width:640px){
+    .wrap{width:calc(100% - 32px)}
+    .sec,.tagline{padding:64px 0}
+    .h-hero{font-size:40px;line-height:44px;letter-spacing:-.02em}
+    .h-sec{font-size:30px;line-height:36px}
+    .h-big{font-size:30px;line-height:38px}
+    .lead{font-size:17px;line-height:26px}
+    .actions .btn{flex:1 1 100%;justify-content:center}
+    .report{padding:16px}
+    .rep-meta{grid-template-columns:1fr}
+    .rep-row{grid-template-columns:12px 1fr 80px}
+    .rep-row .range{display:none}
+    .rep-row.opt{display:none}
+    .checks{grid-template-columns:1fr}
+    .svc a{grid-template-columns:28px minmax(0,1fr) 20px;gap:12px}
+    .svc .tube{grid-column:2;flex-direction:row;flex-wrap:wrap;gap:12px}
+    .svc .go{grid-row:1;grid-column:3}
+    .svc h3{font-size:24px;line-height:32px}
+    .people-grid{grid-template-columns:1fr}
+    .score{grid-column:auto}
+    .score .btn{margin-left:0}
+    .form{padding:20px}
+    .map{aspect-ratio:auto;height:440px}
+    .poi.edge,.scale{display:none}
+    .f-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Flat mark built from the lab's sign: blue tile, white M, red dot. Swap for the real logo file. -->
+    <symbol id="mark" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="var(--accent)"/><path d="M9 23V10l7 8 7-8v13" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25" cy="25" r="3" style="fill:var(--orange)"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Laboratoire Merchan, retour en haut"><svg aria-hidden="true"><use href="#mark"/></svg>Laboratoire Merchan</a>
+    <nav class="menu" aria-label="Navigation principale">
+      <a href="#analyses">Analyses</a>
+      <a href="#laboratoire">Le laboratoire</a>
+      <a href="#deroulement">Déroulement</a>
+      <a href="#questions">Questions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-r">
+      <a class="btn primary sm" href="#contact">Réserver mon prélèvement</a>
+      <a class="icon-btn" href="tel:+212539939920" aria-label="Appeler le laboratoire"><i class="ph ph-phone"></i></a>
+      <button class="icon-btn toggle" id="toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="panel"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="panel" id="panel">
+  <ul>
+    <li><a href="#analyses">Analyses</a></li>
+    <li><a href="#laboratoire">Le laboratoire</a></li>
+    <li><a href="#deroulement">Déroulement</a></li>
+    <li><a href="#questions">Questions</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="btn primary" href="#contact">Réserver mon prélèvement</a>
+</div>
+
+<main id="main">
+
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="enter">
+      <div class="status">
+        <span><i class="dot" id="dot"></i><span id="openText">Ouvert dès 07:30 en semaine</span></span>
+        <i class="sep" aria-hidden="true"></i>
+        <span>5,0 sur Google, 4 avis</span>
+      </div>
+      <h1 class="h-hero">Vos analyses à Tanger, expliquées par <em>votre biologiste</em></h1>
+      <p class="lead">Laboratoire Merchan, avenue Hassan II. Prises de sang dès 07:30, une salle réservée aux enfants, et un docteur joignable quand une valeur vous inquiète.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Réserver mon prélèvement <i class="ph ph-arrow-right"></i></a>
+        <a class="btn secondary" href="tel:+212539939920"><i class="ph ph-phone"></i>05 39 93 99 20</a>
+      </div>
+    </div>
+
+    <!-- Moment: a results report, built in code with sample values -->
+    <figure class="report enter" aria-label="Exemple de compte rendu d'analyses">
+      <span class="sample">Exemple</span>
+      <div class="rep-head">
+        <div><div class="t">Compte rendu d'analyses</div><div class="meta mono">Dossier 2611 0417</div></div>
+        <svg aria-hidden="true"><use href="#mark"/></svg>
+      </div>
+      <div class="rep-meta">
+        <div class="meta">Patiente<b>Salma Idrissi</b></div>
+        <div class="meta">Prélevé le<b class="mono">17/11/2026 · 08:12</b></div>
+      </div>
+      <ul class="rep-rows">
+        <li class="rep-row"><i class="cap violet" title="Tube violet"></i><span class="name">Hémoglobine<span class="ref mono">12,0 à 16,0 g/dL</span></span><span class="val mono">13,4 <small>g/dL</small></span><span class="range"><i class="ok" style="left:25%;right:25%"></i><i class="mk" style="left:46%"></i></span></li>
+        <li class="rep-row"><i class="cap grey" title="Tube gris"></i><span class="name">Glycémie à jeun<span class="ref mono">0,70 à 1,10 g/L</span></span><span class="val mono">0,92 <small>g/L</small></span><span class="range"><i class="ok" style="left:25%;right:25%"></i><i class="mk" style="left:48%"></i></span></li>
+        <li class="rep-row flag"><i class="cap yellow" title="Tube jaune"></i><span class="name">Cholestérol total<span class="ref mono">inférieur à 2,00 g/L</span></span><span class="val mono">2,14 <small>g/L</small></span><span class="range"><i class="ok" style="left:0;right:30%"></i><i class="mk" style="left:76%"></i></span></li>
+        <li class="rep-row opt"><i class="cap yellow" title="Tube jaune"></i><span class="name">TSH<span class="ref mono">0,40 à 4,00 mUI/L</span></span><span class="val mono">2,10 <small>mUI/L</small></span><span class="range"><i class="ok" style="left:15%;right:15%"></i><i class="mk" style="left:47%"></i></span></li>
+        <li class="rep-row opt"><i class="cap blue" title="Tube bleu"></i><span class="name">TP<span class="ref mono">70 à 100 %</span></span><span class="val mono">88 <small>%</small></span><span class="range"><i class="ok" style="left:30%;right:5%"></i><i class="mk" style="left:68%"></i></span></li>
+      </ul>
+      <div class="note">
+        <div class="who"><i class="ph ph-chat-circle-text"></i>Note du biologiste</div>
+        <p>Cholestérol légèrement au dessus de la norme, rien d'urgent. À recontrôler à jeun dans trois mois. Appelez le laboratoire si vous avez une question.</p>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- Facts from the lab's public listing and photos -->
+<div class="facts">
+  <ul class="wrap">
+    <li><i class="ph ph-star"></i>5,0 sur Google</li>
+    <li><i class="ph ph-clock"></i>Ouvert dès 07:30 en semaine</li>
+    <li><i class="ph ph-baby"></i>Salle Mère et Enfant</li>
+    <li><i class="ph ph-door-open"></i>Salles de prélèvement séparées</li>
+    <li><i class="ph ph-map-pin"></i>Résidence Rouaim, Merchan</li>
+  </ul>
+</div>
+
+<!-- The lab -->
+<section class="about sec" id="laboratoire">
+  <div class="wrap">
+    <div>
+      <h2 class="h-sec">Un laboratoire de quartier, sérieux et à l'écoute</h2>
+      <p class="body">Le Laboratoire Merchan vous reçoit avenue Hassan II, Résidence Rouaim, dans des locaux récents : un accueil clair, des salles de prélèvement séparées et une salle réservée aux mères et aux enfants.</p>
+      <p class="body">Vous repartez avec vos résultats, et avec les explications qui vont avec.</p>
+      <ul class="checks">
+        <li><i class="ph ph-check"></i><span><b>Biologiste joignable</b><span>Il répond à vos questions sur vos résultats</span></span></li>
+        <li><i class="ph ph-check"></i><span><b>Équipe à l'écoute</b><span>Un personnel sérieux et attentionné</span></span></li>
+        <li><i class="ph ph-check"></i><span><b>Tarifs raisonnables</b><span>Demandez un devis avant votre visite</span></span></li>
+        <li><i class="ph ph-check"></i><span><b>Accueil des enfants</b><span>Une salle Mère et Enfant dédiée</span></span></li>
+      </ul>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="fig mono accent">5,0</span><span class="lbl">Note Google, 4 avis</span></div>
+      <div class="stat"><span class="fig mono orange">07:30</span><span class="lbl">Premiers prélèvements, du lundi au vendredi</span></div>
+      <div class="stat wide"><p>Une valeur hors norme sur votre compte rendu ? Le biologiste vous l'explique par téléphone</p><a class="btn secondary" href="tel:+212539939920"><i class="ph ph-phone"></i>Appeler</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Tagline, word by word -->
+<section class="tagline" aria-label="Notre engagement">
+  <div class="wrap">
+    <p class="h-big" id="tagline">Une prise de sang rapide,<br>des résultats fiables,<br>et toujours quelqu'un<br>pour vous les expliquer</p>
+    <p class="src meta">Laboratoire Merchan, Tanger</p>
+  </div>
+</section>
+
+<!-- Analyses -->
+<section class="services sec" id="analyses">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2 class="h-sec">Les analyses courantes, au même endroit</h2><p class="sec-sub">Apportez l'ordonnance de votre médecin. Nous vous indiquons la préparation : jeûne, horaire, recueil.</p></div>
+      <p class="legend meta"><span class="caps"><i class="cap violet"></i><i class="cap yellow"></i><i class="cap blue"></i><i class="cap grey"></i><i class="cap red"></i></span>Couleur du bouchon du tube prélevé</p>
+    </div>
+    <ul class="svc">
+      <li><a href="#contact">
+        <span class="n mono">01</span>
+        <div><h3>Hématologie</h3><p class="ex">NFS, vitesse de sédimentation, groupe sanguin et Rhésus, bilan de coagulation</p></div>
+        <div class="tube mono"><span><i class="cap violet"></i>Violet, EDTA</span><span><i class="cap blue"></i>Bleu, citrate</span></div>
+        <i class="ph ph-arrow-right go"></i>
+      </a></li>
+      <li><a href="#contact">
+        <span class="n mono">02</span>
+        <div><h3>Biochimie</h3><p class="ex">Glycémie, HbA1c, bilan lipidique, urée et créatinine, bilan hépatique, acide urique</p></div>
+        <div class="tube mono"><span><i class="cap yellow"></i>Jaune, sérum</span><span><i class="cap grey"></i>Gris, glycémie</span></div>
+        <i class="ph ph-arrow-right go"></i>
+      </a></li>
+      <li><a href="#contact">
+        <span class="n mono">03</span>
+        <div><h3>Hormonologie</h3><p class="ex">Bilan thyroïdien (TSH, T3, T4), fertilité, vitamine D, ferritine, PSA</p></div>
+        <div class="tube mono"><span><i class="cap yellow"></i>Jaune, sérum</span></div>
+        <i class="ph ph-arrow-right go"></i>
+      </a></li>
+      <li><a href="#contact">
+        <span class="n mono">04</span>
+        <div><h3>Grossesse et bilan prénatal</h3><p class="ex">Test de grossesse (bêta hCG), toxoplasmose, rubéole, groupage, suivi mensuel</p></div>
+        <div class="tube mono"><span><i class="cap yellow"></i>Jaune, sérum</span><span><i class="cap violet"></i>Violet, groupage</span></div>
+        <i class="ph ph-arrow-right go"></i>
+      </a></li>
+      <li><a href="#contact">
+        <span class="n mono">05</span>
+        <div><h3>Sérologie et immunologie</h3><p class="ex">Hépatites B et C, VIH, CRP, facteur rhumatoïde, sérologies infectieuses</p></div>
+        <div class="tube mono"><span><i class="cap red"></i>Rouge, sérum sec</span></div>
+        <i class="ph ph-arrow-right go"></i>
+      </a></li>
+      <li><a href="#contact">
+        <span class="n mono">06</span>
+        <div><h3>Microbiologie</h3><p class="ex">ECBU, coproculture, prélèvements de gorge et vaginaux, antibiogramme</p></div>
+        <div class="tube mono"><span><i class="cap sterile"></i>Flacon stérile</span></div>
+        <i class="ph ph-arrow-right go"></i>
+      </a></li>
+    </ul>
+    <div class="svc-foot">
+      <p class="meta">Liste indicative <span class="todo">{{à valider avec le laboratoire}}</span>. Une analyse manque ? Appelez, nous vous orientons</p>
+      <a class="btn secondary" href="tel:+212539939920"><i class="ph ph-phone"></i>Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<!-- What patients say -->
+<section class="band" aria-labelledby="why">
+  <div class="band-photo">
+    <!-- Best replaced with the lab's own reception photo (white counter, wood, blue sign) -->
+    <img src="https://images.unsplash.com/photo-1614308460927-5024ba2e1dcb?w=1200&q=80&auto=format&fit=crop" alt="Objectifs d'un microscope de laboratoire" loading="lazy">
+  </div>
+  <div class="band-body">
+    <h2 class="h-sec" id="why">Ce que nos patients disent du laboratoire</h2>
+    <ul class="quotes">
+      <li><span class="n mono">01</span><div><b>Un personnel à l'écoute</b><q>Personnel sérieux, gentil et à l'écoute</q></div></li>
+      <li><span class="n mono">02</span><div><b>Un biologiste joignable</b><q>Dr à l'écoute, joignable</q></div></li>
+      <li><span class="n mono">03</span><div><b>Des tarifs raisonnables</b><p>Mentionné dans les avis Google</p></div></li>
+      <li><span class="n mono">04</span><div><b>Une salle pour les enfants</b><p>La salle Mère et Enfant accueille les plus petits au calme</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="how sec" id="deroulement">
+  <div class="wrap">
+    <div>
+      <h2 class="h-sec">Vos analyses en trois étapes</h2>
+      <p class="lead">Un appel, un prélèvement de quelques minutes, puis vos résultats avec les explications du biologiste.</p>
+      <a class="btn primary" href="#contact">Réserver mon prélèvement <i class="ph ph-arrow-right"></i></a>
+    </div>
+    <ol class="steps">
+      <li><span class="n mono">01</span><div><h3>Appelez le laboratoire</h3><p>Ordonnance en main, nous vous disons s'il faut venir à jeun et à quelle heure.</p></div></li>
+      <li><span class="n mono">02</span><div><h3>Venez pour le prélèvement</h3><p>Dès 07:30 en semaine, dans une salle séparée. Les enfants sont reçus en salle Mère et Enfant.</p></div></li>
+      <li><span class="n mono">03</span><div><h3>Récupérez vos résultats</h3><p>Au laboratoire, avec les explications du biologiste si vous le souhaitez.</p></div></li>
+      <li><span class="n mono">+</span><div><h3>Prélèvement à domicile</h3><p><span class="todo">{{disponibilité à confirmer}}</span></p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="people sec" aria-labelledby="avis">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="h-sec" id="avis">Ce que nos patients retiennent</h2></div>
+    <div class="people-grid">
+      <article class="doc">
+        <div><span class="av mono">OE</span><h3>Dr Omar El Younoussi</h3><p class="meta">Biologiste, Laboratoire Merchan</p></div>
+        <p class="small" style="color:var(--text-2)">Joignable par téléphone pour commenter vos résultats.</p>
+      </article>
+      <article class="review">
+        <p>« Excellent laboratoire, personnel sérieux, gentil et à l'écoute. Très bonne expérience, je recommande. »</p>
+        <div class="who"><b style="font-weight:500">Genane O.</b><span class="meta">Avis Google</span></div>
+      </article>
+      <article class="review">
+        <p>« Excellent service. Dr à l'écoute, joignable. Tarifs raisonnables. Je recommande. »</p>
+        <div class="who"><b style="font-weight:500">Majd H.</b><span class="meta">Avis Google</span></div>
+      </article>
+      <div class="score">
+        <span class="fig mono">5,0</span>
+        <span class="meta">Note moyenne sur Google Maps, 4 avis</span>
+        <a class="btn secondary" href="https://maps.google.com/?cid=11302023671954604105" target="_blank" rel="noopener">Lire les avis <i class="ph ph-arrow-up-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq sec" id="questions">
+  <div class="wrap">
+    <div class="aside">
+      <h2 class="h-sec">Avant de venir au laboratoire</h2>
+      <p>Une autre question ? Le biologiste vous répond par téléphone.</p>
+      <a class="btn secondary" href="tel:+212539939920"><i class="ph ph-phone"></i>Appeler le laboratoire</a>
+    </div>
+    <div>
+      <details open><summary>Venir à jeun : dans quels cas ?<i class="ph ph-plus"></i></summary><p>Pour la glycémie et le bilan lipidique, prévoyez 8 à 12 heures sans manger. L'eau reste autorisée. En cas de doute, appelez avec votre ordonnance.</p></details>
+      <details><summary>Venir sans réservation, c'est possible ?<i class="ph ph-plus"></i></summary><p>Oui, aux heures d'ouverture. Réserver un créneau évite simplement l'attente aux heures chargées du matin.</p></details>
+      <details><summary>L'ordonnance est obligatoire ?<i class="ph ph-plus"></i></summary><p>L'ordonnance de votre médecin est nécessaire pour un remboursement. Certaines analyses peuvent être faites à votre demande : posez la question à l'accueil.</p></details>
+      <details><summary>Ma mutuelle prend en charge mes analyses ?<i class="ph ph-plus"></i></summary><p>Apportez votre carte et votre ordonnance. Organismes conventionnés : <span class="todo">{{liste à confirmer : AMO, CNSS, CNOPS…}}</span></p></details>
+      <details><summary>Sous quel délai mes résultats sont prêts ?<i class="ph ph-plus"></i></summary><p>Le délai dépend de l'analyse. Pour un bilan courant : <span class="todo">{{délai à confirmer}}</span>. L'accueil vous indique la date au moment du prélèvement.</p></details>
+      <details><summary>Comment se passe une prise de sang pour un enfant ?<i class="ph ph-plus"></i></summary><p>Les enfants sont reçus dans la salle Mère et Enfant, au calme, avec un parent à leurs côtés.</p></details>
+      <details><summary>Comment faire un recueil d'urine (ECBU) ?<i class="ph ph-plus"></i></summary><p>Utilisez un flacon stérile, de préférence avec les premières urines du matin, après une toilette locale. Apportez le flacon au laboratoire dans l'heure.</p></details>
+      <details><summary>Les documents à apporter<i class="ph ph-plus"></i></summary><p>Votre ordonnance, votre carte d'identité et votre carte de mutuelle. Pour un suivi, apportez aussi vos anciens résultats.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Contact / final CTA -->
+<section class="contact sec" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <h2 class="h-sec">Réservez votre prélèvement</h2>
+        <a class="phone mono" href="tel:+212539939920">05 39 93 99 20</a>
+        <div class="addr"><i class="ph ph-map-pin"></i><span>Avenue Hassan II, Résidence Rouaim, rez de chaussée<br>Merchan, Tanger 90000</span></div>
+        <ul class="hours">
+          <li><span>Lundi au vendredi</span><b class="mono">07:30 à 19:00</b></li>
+          <li><span>Samedi</span><span class="todo">{{à confirmer}}</span></li>
+          <li><span>Dimanche</span><span class="todo">{{à confirmer}}</span></li>
+        </ul>
+        <ul class="landmarks">
+          <li><i class="ph ph-signpost"></i><span>Sur l'avenue Hassan II, à deux pas de l'<b>Hôpital Italien</b></span></li>
+          <li><i class="ph ph-graduation-cap"></i><span>À côté du <b>lycée Zineb Nafzaouia</b></span></li>
+          <li><i class="ph ph-tree"></i><span>À moins de 10 minutes à pied des <b>Jardins de la Mendoubia</b></span></li>
+        </ul>
+      </div>
+      <figure class="map">
+        <!--MAP-->
+<svg class="mapsvg" viewBox="0 0 960 688" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="map-title">
+<title id="map-title">Plan du quartier : le Laboratoire Merchan sur l'avenue Hassan II, près de l'Hôpital Italien et du lycée Zineb Nafzaouia</title>
+<defs><path id="rl0" d="M157.8 38L156.9 54.6L156.8 56.5L157.3 75.3L157.4 86.9L159.1 98.1L160.4 104.6L161.9 110.9L164.1 116.4L169.4 126L176.7 135.8L184.2 143.7L189.2 148.7L193.6 152.5L199.3 155.8L203.9 158.2L210 161.3L218.2 164.6L226.7 167.1L258.1 174L267.1 174.8L276.4 176.4L317.8 183.7L357.2 192.2L365.6 194.3L374.7 197.5L383.2 202.1L388.6 206.6L392.6 210.8L399.1 218.1L414.1 237.6L443.3 284.5L464.2 319.3L479 343.8L501.1 379.4L530.5 424.5L544.5 448.3L550.5 458.9"/><path id="rl1" d="M262.9 469.9L275.7 480.6L303.7 503.3L332 527.7L347.8 541.5L362.5 556.9L374.9 573.5L385.2 588.5L387.9 593.8L389.8 597.8L398 614.2L407.4 638.4L414.1 661.2L425.5 690.8L434.5 720.4L436.8 734.6"/><path id="rl2" d="M109.2 327L122.1 316.6L130.2 309.8L138.8 303.8L162.5 286.8L188.6 274.4L213.2 263.8L234.6 253.6L247.3 248.2L260.9 245L282.2 243.1L287.9 243.1L317.2 246.5L322.1 248.9L326.4 252.3"/></defs>
+<rect width="960" height="688" class="m-bg"/>
+<path class="m-park" d="M1023.5 431.7L1025 430.1L1033.4 421.1L1052.5 412.2L1058 407.6L1066 392.8L1070.8 383.2L1073.1 378.3L1071.3 363.2L1070.6 354.4L1064.9 334.8L1050 309.5L1000.8 313.8L961.5 316.6L884 315L884.3 320.1L839.4 328.2L832.2 361.1L818.3 385.5L810.2 402.5L810.6 425.2L801.2 430.8L792.4 444.4L792.4 448.7L821.6 445.3L914.3 441.9L975.2 437.6L1010.4 437.6L1023.5 431.7Z"/><path class="m-park" d="M899.3 600.1L882 562.4L870.9 538.1L823.5 552.9L808.4 557.1L812.7 570L801.2 572.4L798 561.1L780.1 568.1L781 583.7L780.7 599.2L774.5 611L764.5 611.4L756 618L730 637.2L738.7 649.2L747.9 661.1L752.8 654.3L761.2 648.3L774.1 640.5L777.1 642.8L779.5 639.4L780.9 639L783.3 644L792.9 649.5L796.9 642.8L804.7 637.2L818.4 651.2L818.6 658.5L822.1 662.3L833.2 664.1L842.2 651.5L845.6 656.5L899.3 600.1Z"/><path class="m-park" d="M969.1 451.7L974.6 462.6L952.3 476.5L926 491.8L918 480L913.4 470.6L910.6 462.8L910.4 456L969.1 451.7Z"/><path class="m-park" d="M404.1 373.6L361.2 383.3L367.1 409L410 399.2L404.1 373.6Z"/><path class="m-park" d="M385.3 -88.1L315.6 -103.4L309.9 -104.7L224.6 -124.8L217.9 -124.8L212.7 -123.3L210.4 -121L209.2 -117.1L207.7 -112.7L177.8 -20.2L172.7 24.8L272.2 36.1L300.4 38.8L372.7 36.5L438 36.5L459.7 36.1L526.2 59.5L561.3 -28.9L518.4 -50.7L510.9 -53.9L486.8 -64.5L441.9 -77.8L440 -72.3L396.7 -84.8L385.3 -88.1Z"/><path class="m-park" d="M500.2 69.7L495.4 87.3L552.5 108.5L554.7 91L500.2 69.7Z"/>
+<path class="r-foot" d="M928.5 364.8L926 364.3L923.5 364.7L921.2 365.9L919.5 367.7L918.5 370L918.3 372.5L918.9 375L920.3 377.1L922.3 378.6L924.7 379.4L927.2 379.4L929.5 378.6L931.5 377.1L932.8 375.1L933.5 372.7L933.3 370.3L932.4 367.9L930.7 366L928.5 364.8M854.6 425.8L855.4 449.9M893.2 361.5L896.2 358.7L896.8 358.2L897.5 357.8L898.4 357.5L899.1 357.3L900.2 357.2L902 357.1L904.9 357.1L909.3 357.2L913.7 357.4L915.9 357.7L917 358L917.8 358.3L918.4 358.6L918.9 359L919.5 359.5L920.3 360.4L923.5 364.7M882.3 338L895.8 336.9L915.9 335.5L950.3 333.3L959.3 332.1L966.8 331.2L972.4 330.2L982.8 327.7L991.3 324.5L1003.6 319.8L1004.2 315.8L1003.1 311.5M799.4 454.9L800 445.3L800.6 442.7L801.8 440.7L804 438.5L819.1 431.6L832 428.3L842.5 425.9L846 425.4L850.5 425.4L854.6 425.8L859.7 427.7L864.3 430.5L867.8 432.9L871.8 434.9L876.1 436.3L881.1 437.3L887 437.5L903.4 437.3M952.2 549.3L926.2 542.8L922.8 542.3L919.6 542.2L916.8 542.5L883 553.1M538.5 392.5L545 392.3L571.1 391.4L578.8 385L590.4 378.1L609.3 371.9L626.2 371.6M775.4 198.2L776.8 182.6L776.7 179L776.6 176.6L776.5 174.6L776.2 172.8L774.3 167.5L772.9 164.3M57.9 107L8.2 98L-16.6 93.5M31 190.2L47 197.1L61.8 198.2L73.1 197.7L87.5 191.8L94.5 190.3M-24.1 178.6L-18.5 185.3L16.2 206.2M97.1 123.3L68.8 126.7L19.4 120.1L6.1 117.5L-44.5 107.9L-79 95.5L-89.6 95.2L-100.9 93.2L-129.4 80.3L-151.1 66.2L-160.5 55.9M-50.1 184.9L-34.8 197.3L-28.2 202.7L-2.2 212.7L9.7 221.6M928.5 606.5L923.1 623.2L922 630L921.7 632.6M969.3 475.6L940.6 470.8L904.4 462.6M919 446.3L930.8 459.9L940.6 470.8M870.3 54.6L865.5 59.3L859.3 66.4L855.1 72.1L850.6 78.5L843.9 87.6L831.5 104M876 311.9L898.3 325L915.9 335.5L927.5 340.9L940 346.4L948.7 349.2L954.5 350.7L957.6 352.3L961.1 354.3L962.3 356.7L962.7 360.6L963.3 364.3M896.5 291.7L898 306.7M898 306.7L898.3 311M896.5 291.7L895.7 280.6L893.1 244.6L893.1 210.3L893 203M791.7 176.1L786.1 169.4M858.8 154.3L861.9 152.9L864 152L865.9 151L867.5 149.7L870.2 146.4L875.8 139.2L887.4 122.9M898 122.1L897.6 122.7L897.2 123.5L896.4 124.2L895.4 124.7L894 125.1L892.9 125.1L891.1 125L889.5 124.4L887.4 122.9L886 121.8L884.6 120.7L884.3 120.5L884 120.3L883.7 120.2L883.4 120.2L883.3 120.2L883.1 120.1L882.8 120.2L882.5 120.3L882 120.7L881.2 121.2L880.9 121.4L880.7 121.5L880.5 121.5L880.4 121.5L880.2 121.5L879.9 121.3L879.7 121.2L879.1 120.6L878.6 120.2L877.3 119L874.1 116.5L858.3 102.4M821.3 95.3L800.1 123.1M845.2 117.1L831.5 104L821.3 95.3L818.3 93.2L816.5 91.8L815.5 91.1L815 90.6L814.7 90.3L814.6 90.1L814.5 90L814.4 89.9L814.3 89.7L814.3 89.6L814.3 89.4L814.2 89.2L814.3 88.6L814.4 87.8L814.5 87.3L814.8 86.6L815.2 85.8L816 83.9L816.6 82.6L817.7 80.4L819.4 77.4L821.1 74.6M836.3 28.3L837.4 30.2L838.2 31.7L838.9 33.4L839.4 35.5L839.6 38.2L839.8 42.5L840 51.8M887.1 193.9L858.6 189.3L859 178.8L859.1 172.3L858.9 157.8L858.8 154.3L858 147.1L855.9 133M718.4 270.8L720.7 238.6L721.9 225L698.2 217.6L695.6 214.4M545 392.3L543.4 373.1L542.6 359.4L538.9 325.9M40.3 138.1L37.3 150.5L37.5 154.3L39.2 161.8L38.5 175M125.1 174.1L111.3 169.5L100.8 168.2L86.4 171.2L75.1 176.6L64.1 178.1L58.8 178.3L48.4 181.3L36.8 181.8M119.7 195.6L125.1 174.1L135.1 152.6M99.7 130.4L97.1 123.3M136.2 93L129.6 107.1L125.3 117.8L116 125.9L99.7 130.4L85.4 148.8L79.1 152.6L73.1 153.3L61.1 155.2L53 157.3L39.2 161.8L31.5 160.1L11.8 157.5L6 156L1.5 150.9L-4.3 142.8M68.8 126.7L77.7 75.4M11.4 79.3L8.2 98L6.1 117.5L-1.8 137.9L-4.3 142.8L-20 146L-29.2 149L-36.3 153.5L-40.6 155.2L-47.2 158L-50.5 162.2L-51.8 169.9L-53 177L-59.1 182.6L-67.2 187L-69.8 191.5L-74.7 202.9L-87.6 215.5L-102.8 228.1L-112.9 235.6M47 197.1L45.4 209.1L39.7 220.8L37.7 232L36.9 252.2M62.4 211.5L61.1 235.6L61.1 251.5M122 214.2L107.9 213.4L101.4 212.5L81.9 210.6L62.4 211.5L60.3 211.6L52.1 210.8L45.4 209.1M72.5 301.8L74 296.3L86.4 272.6L93.1 259.1L99.1 253.3L101.4 245.2L101.7 233.2L101.4 212.5M119.2 466.1L114.5 442.4L112.2 428.9M90.9 425.3L99.2 395.5M63.5 422.2L68.9 388.6M33.1 420.3L37.3 384.7L38.3 355.2M70.4 475.5L64.6 450.2L58.6 422.4M17.7 484.2L12.2 459.4L2.5 420.4M145.8 427.3L169.9 404.3M764.8 151.8L755.9 138.5L751.3 130.7L748.4 126.1L747.5 124.7L745.8 120.6L744.6 117.4L742 108.7L738.3 95.2M612.2 308.5L607.1 297.2L606.1 287.4L608.9 276.5L613.9 264L621.4 236.9M695.4 347.9L697.6 369.4M538.9 325.9L539.1 317.8M559.5 452.7L562.3 459.3L565.2 466.1M605.8 586.6L612.3 583.5L618.9 580.2M595.8 565.9L602.4 562.9L609.1 559.9M537.4 449L544.5 448.3L551.8 447.6M552.7 474.8L557.3 472.9L561.5 471.3M521.8 99.3L530.9 76.1L533 69.6L529.3 67.3L522.4 62.9L488.4 50.8L451.2 39.9M488.4 50.8L506.6 3.2M122 214.2L137.4 222.8L136.8 219.3L134.5 214.9L134.2 210.1L134.5 204.3M119.7 195.6L123.4 190.1L137.6 185.4L147.1 181.2L159.1 179.7M159.1 179.7L162.4 183.1M159.1 179.7L160.9 178.8L180.8 175.2L183.7 174.2L184.3 169.6M114.1 84L139 53.3L143.2 48.1L149.2 40.6L151.4 38.1L153 35.2L154.2 32L154.7 28.7L154.8 25.5L154.6 22.5L156.9 -17.1L156.7 -18.5L156.3 -19.7L155.3 -21L154.2 -21.8L99.6 -44L-28.3 -96.7M168.8 27.7L169.2 31.4L169 35.1L167.9 38.7L166.3 41.4L165.2 43.1L163.3 45.7L161.9 47.8L161 49.4L160.2 50.9L159.3 52.3L158.2 53.5L156.9 54.6L155 54.9L153.1 54.9L151.2 54.5L149.4 53.8L147.8 52.7L146.4 51.4L143.2 48.1M99.2 395.5L113.2 371.3M621.4 236.9L633.5 184.5M889.4 203L887.1 193.9M772.9 164.3L769.9 159.6L767 155.4L764.8 151.8M859 178.8L798.5 176.5L791.7 176.1M786.1 169.4L780.6 171.5L776.2 172.8M344.1 534.5L304.1 500.5L262.5 465.4L257.9 461.6M415.1 651.9L410.6 637L400.9 612.9L394 599.1M394 599.1L390 591.1M390 591.1L387.2 585.4L365.9 555.2L354.8 544.2M354.8 544.2L350.1 539.5L344.1 534.5M224.2 434.5L202.8 422.7L195.2 415.4L181 402.7L161.9 385.6L144.4 366.8M144.4 366.8L140.6 366.3L116.9 362.6M116.9 362.6L72.4 349.2L51.9 347L-58.4 343.6M336.9 544.8L313.9 522.9L280.6 497.3L229.9 462L223.4 459.2L217.6 459.3L212.5 462L208.5 466.3L205 473.4L202.8 479.8L202.6 481.3L195.9 479.3L190.2 478.1L193.4 471.1L194.3 466.1L193 461.3L188.4 458L185.9 458.1L185.5 455.1L184.5 449.4L196.3 447.4L201.6 445.1L202.8 440.6L201.8 437.1L198.9 432.1L193.8 426.9L184.8 417.2L176.4 409.5L169.9 404.3M38.3 355.2L-20.8 353.5L-69.1 351.2L-73.8 350.9M113.2 371.3L87.2 362.5L74.5 359.7L50.1 356.5L38.3 355.2M169.9 404.3L153.1 391.2L137.9 382.1L113.2 371.3M401.5 660.9L395.6 640.1L388.1 619.9L379.4 600.5L352.4 561.6L345 553.4M345 553.4L338.9 546.7L336.9 544.8M903.4 437.3L922.7 409.4L929.2 404L948 388.1L964.3 374.4L963.3 364.3M12.7 215.5L20.6 219.6L25.1 221.2L28.5 221.4L39.7 220.8M78.3 232.8L101.7 233.2L118.9 234.4L122.9 235.4L125.8 236.9L131.4 241.5M3.1 250.5L25.4 251.7L31.7 252.3L36.9 252.2L44.6 252.9L55.6 252L61.1 251.5M-37.5 240L-30.6 234.3L-24.2 232.6L-18.6 231.5L4.7 232.6"/>
+<path class="r-min" d="M934.4 112.9L919.4 124.7M928.5 606.5L922.4 609.5L918.1 613.2L915 617L913.6 619.7L913.1 622.3L913.3 624.3L913.8 626.6L914.7 628.2L916.4 629L922 630L935.9 631.3L938.5 631.2L940.5 630.4L941.8 629.3L942 627.4L941.7 625.5L940.9 623L939.3 619.8L932.5 611.4L928.5 606.5M448.4 46.7L451.2 39.9L453.4 33L430.2 12L428.6 -16.7M-12.1 463.7L12.2 459.4L64.6 450.2L114.5 442.4M896.1 92.1L904.1 87.3L908.2 85.5L911.5 84.1L914.4 83M392.2 -96.7L389.9 -90.7L387 -78L383.5 -62L368.5 5.8L362.4 33L360.8 40.5L359.1 48.1M240.4 421.2L242.6 413.4M873.5 59.1L895.7 54.9"/>
+<path class="r-res" d="M1011.7 246.4L1004.1 245L992.5 242.1L986.4 240.7L982.4 239.3L975.2 234.8L970.6 230.7L954.8 219.4L951.2 217L949 215.5L946.2 213.8L944.4 212.9L942.5 212.1L939 210.9L934.3 209.9L922.6 206.6L913.7 204.9L893 203L889.4 203L846.9 202.8L779.6 198.8M109.2 327L122.1 316.6L130.2 309.8L138.8 303.8L162.5 286.8L188.6 274.4L213.2 263.8L234.6 253.6L247.3 248.2L260.9 245L282.2 243.1L287.9 243.1L317.2 246.5L322.1 248.9L326.4 252.3M708.5 189.7L703.8 200.2L700.2 206.2L698.3 209.9L696.9 212.4L695.6 214.4L694.7 215.6L693.2 217.5L690.9 219.3L688 221.6L684.5 224L679.8 226.9L677.5 228.1L674.2 229.4L671.2 230.2L667.4 231.1L661.4 232.3L655.4 232.7L646.9 233.8L639.3 234.4L631.3 235.7L621.4 236.9L611.1 240.4L592.7 245.9L553.3 257.4L505.3 271.1L472.1 278.9L455.5 282.1L443.3 284.5M479 343.8L488.6 335.8L496.7 332.3L521.6 323.4L534.9 319.2L539.1 317.8L554.8 313.4L560.5 312.2L565 311.5L572 310.6L585.2 308.9L596.9 308.3L607.6 308.3L612.2 308.5M846.9 202.8L846.2 204.4L845.6 205.6L844.4 207.4L842.9 209.1L841 210.8L834.4 215.9L830 219.6L827.9 221.8L826.8 223.2L825.6 225L824.8 226.3L824.1 227.8L823 231.3L821.8 235.7L821.4 237.7L821 239.7L820.7 241.9L820.6 245.2L818.5 301.3L818.3 303.2L817.9 305.6L816.9 309.7M652.6 454.2L648.3 438.2L639.2 402.3L635.9 392.3L632.7 384.1L630.3 380L626.2 371.6L622.7 366.3L619.7 361L617 355.3L614.9 343.6L613.5 328L612.2 308.5M109.2 327L96.5 316.7L89.3 311.9L84.3 308.6L78.3 304.7L72.5 301.8L59.9 299.5L42.3 298.4L31.2 296L18.2 291.9L0.4 285.9L-16.7 282.5L-37.6 278.7L-66.5 274L-88.7 270.5L-100.3 268.5L-109.6 268.1L-120.6 268.6L-128.5 269.8L-138.2 271.7L-163.1 277.6L-175.9 280L-228.3 292.7L-244.3 297.2L-251.6 300L-269.5 306.3L-280 309.3L-289.9 310.7L-358.5 308L-366.9 307.4L-374.8 305.9L-408 299.2L-416 298.2L-419.2 296.6L-437.4 293.9L-444 292.8L-446.8 291.7L-454.7 289.7L-469.6 285.5L-485 280.1L-504.5 270.7L-518.2 257L-525.8 236.5L-529.2 207.8L-528.5 174.2L-537.5 159.4L-549.9 147L-575.6 118.9L-584.9 111L-594.8 105.5L-603.2 102.2L-616.2 101L-620.6 100.6M195.2 454.2L201.8 455.5L208.4 455.6L215 454.6L221.3 452.3M605.1 568.4L561.1 589.3L532 603.6L503.6 617.3L480.6 629.1L455.1 642.1L417.3 659.3L414.1 661.2M262.9 452.2L258.1 441.8L255.7 437.6L252.9 433.7L249.7 430.1L246.1 426.9L242.2 424.1M179.3 534.7L141.6 525.3L120.3 521.1L102.8 519.7L80.3 521.1L56.2 525.9L8.5 536.8L-23.9 542.3L-36.5 544.6L-50.6 546.3L-62.4 548.8L-80 550.1L-102.4 551.4L-127.5 551.9M347.9 693.1L340.4 676.2L332.2 661.2L323.5 647.5L315.7 637L304.5 621.8L289 602.5L280.5 592.1M742.3 455.6L716.9 453.9L698.8 453.2L684.2 452.8L670.2 452.9L652.6 454.2M407.7 497.9L439 530.5L459.2 550L472.7 562.4L485.5 577.3L491.1 586.5L497 597.9L503.6 617.3M388.3 115.9L388.4 117L389.3 119L390.7 120.5L392.6 121.5L394.7 121.7L396.7 121.3L398.5 120.2L399.8 118.5L400.5 116.5L400.4 114.4L399.1 111.8L397.5 110.4L395.5 109.7L393.4 109.7L391.1 110.5L389.5 112L388.6 113.8L388.3 115.9M388.3 115.9L364.4 116.3L335.3 112.2L309.5 108.2L303.6 108.1L297.8 108.7L293.3 110.2L289.2 111.8L286.9 113.1L284 115.2L268.7 129.2L263.6 133.9L240 154.8L226.7 167.1M400.4 114.4L418.2 111.1L439.2 102.3L458.7 94.4L463.1 92.4L471.1 90.3L476 89.7L482.6 89.5L490.9 89.3L511.9 96.2L521.8 99.3L537.6 105.7L551.4 110.4L559.5 112.6M393.4 109.7L390.7 81.5L385.2 48.3M120.6 86.2L114.1 84L77.7 75.4L65 72L58.8 75.2L50.2 79L42.9 80.9L35.9 81.6L30.1 81.8L22.9 81L11.4 79.3L-5.3 75.7L-15.3 73.5L-23.1 70.8L-33.1 66.5L-42.7 62.7L-49.1 61.4L-61.4 59.2L-64.9 58.7L-93.9 47.8L-113.3 42.5L-129.6 40.6L-136.4 40.4L-139.6 41.1L-141.6 42.3L-153.6 50.9L-160.5 55.9L-163.1 58.2L-165.7 59.1L-168.4 59.1L-188.2 57.6L-201.5 56.4L-213 56.3L-228.1 57.4L-246.7 64.8L-254.9 67L-271.4 66.1L-273.6 65.9L-280.1 64.1L-291.6 61.1L-306.4 57.4L-314.9 56L-324 55.2L-340.5 54.6L-363.2 54.7L-372.3 53.3L-380.5 50L-384.5 47.7L-388.1 42.3L-395.8 19.1M120.6 86.2L136.2 93L146 98.3M65 72L48.1 68.7L44 67.5L40.6 65.6L37.7 62.7L34.9 59.5L31.8 55.1L26 48.6L20.9 44.2L10.6 38.2L-5.2 30.6L-15.2 26.7M0.4 285.9L2 261.3L3.1 250.5L4.7 232.6L9.7 221.6L12.7 215.5L16.2 206.2L18.1 203.1L20 200.3L22.1 198.3L25.1 196L27.6 193.7L31 190.2L34.5 185L36.8 181.8L37.3 180.3L38 177.6L38.5 175M-81.4 347.1L-78.5 350.7L-67 364.8L-65.9 366.3L-48.5 384.6L-30 382.1L37.3 384.7L46 385.1L68.9 388.6L79.8 391.1L87.7 392.2L99.2 395.5L109.5 399.4L120.6 406L133.3 415.9L139.4 421.2L145.8 427.3L149.7 433.1L151.8 447L153.6 459.2M149.7 433.1L131 431L112.2 428.9L106.2 427.4L90.9 425.3L78.6 424.2L63.5 422.2L58.6 422.4L45.4 421.3L33.1 420.3L2.5 420.4L-23.9 419.1M-1.3 487.1L3.7 510.3L8.5 536.8L12.4 556.7L17.9 567.6L25.4 575.8L37.3 585.4L55 597.7L60.4 603.4L63.8 608.2L66.5 617.2L65.6 627.9L60.1 666L57.1 687.6L53.7 705.9L49.7 718.3L45.4 725.4L40.4 730.6L34.3 733.5M708.5 189.7L675.9 169.4L633.4 140.5L615.1 127.8L589.4 110.6L560.9 91.5L552.9 86.1L530.9 76.1L526.4 74M394.2 295.2L421.3 290.3L443.3 284.5M372.1 242.8L381.3 264.5L394.2 295.2M816.9 309.7L812.6 319.4L810 324.2L808.1 327.8L805.6 331.7L801.6 337.3L798.1 342.2L793.5 348.7L789.1 354.3L782 363L778 368.9L773.2 375.1L769.2 380.8L766.2 386.1L765.5 388.9L764.8 392.1L764.2 395.6L763.5 401.3L763.3 404.4L763.4 406.9L763.4 409.3L764.3 414.4L765 418.6L766.3 423.1L767.8 429.3L769.7 435L771.1 437.9L772 440.5L772.3 442.9L772.3 445L772.1 446.8L771.5 448.6L770 450.4L768.1 452.3M550.5 458.9L511.3 460.7L481.6 458.2L461.2 458.4M161.1 831.8L191 794.3L199.6 780.3L206.9 765.6L212.8 750.3L217.3 734.5L229.1 692.4L232.3 683.6L238.4 667.4L247 649.4L254.7 633.1L264.4 616L274.4 600.6L280.5 592.1L309.6 567.6L325.4 555.3L338.9 546.7L340.9 545.5M927 502.4L917.7 491.5L911.7 482.8L906.8 472.3L904.4 462.6L903.8 447.8M875.8 310.9L876 311.9L876.6 314.6L878.2 322L879.9 329.6L881.4 335.1L882.3 338L883.3 340.6L884.7 343.8L887.3 348.9L893.2 361.5L894.8 365L896.6 369.3L898.4 374.7L899.9 380.6L901 390.3L901.6 399.7L903.4 437.3L903.8 447.8M867.5 50L876.8 46.2L900.6 43.9L908.2 43.6M672.5 74.5L677 82L705.1 83L707.6 83.2L710.2 83.6L712.6 84.2L714 84.6L714.9 85.1L715.3 85.3L715.7 85.5L715.9 85.7L716.1 85.9L716.3 86L716.5 86.3L716.6 86.5L716.7 86.9L716.9 87.9L717.4 89.7L717.8 90.9L718.2 91.7L718.5 92.2L718.8 92.6L719.4 93.2L720.1 93.7L720.6 94L721.4 94.4L722.6 94.8L724.2 95.3L725.6 95.7L727.1 95.9L728.5 96L729.8 95.9L733.9 95.6L738.3 95.2L751 93.4L759.2 91.4L765.9 89.4L771.5 87.4L776.4 85.7L781.7 84L786.5 81L789 79.4L791.1 77.6L793.2 75.6L795.6 73.1L800.7 67.6L804.8 63.1L807.6 60L808.3 59.2L808.6 58.8L808.8 58.6L809.1 58.4L809.3 58.2L809.5 58.1L809.8 58L810.1 57.9L810.8 57.6L812 57.3L821.6 54.6L831.6 52.2M766.2 386.1L757.5 382.2L749.3 379.1L741.6 376.7L733 374.4L728.8 373.5L724.5 372.9L714.6 369L707.1 368.5L697.6 369.4L691.5 369.8L688.4 371.7L680.1 372.2L669.2 373.3L656 375.6M910.6 290.3L910.7 290.6L910.7 290.8L910.8 291.2L911 291.7L911.4 292.4L911.8 293.1L912.3 293.7L912.7 294.2L913.1 294.5L913.5 294.7L913.9 294.9L914.4 295.1L914.9 295.2L915.5 295.2L916.6 295.2L917.6 295.3L918.6 295.2L920.8 294.9L953.2 291.4L975.1 288.6L991 287.2L998.3 286.7L1008.3 286.3L1020.2 285.7L1028.8 285.2L1038.2 284.4M855.9 133L852 135.9L847.3 138.9L838.7 142.7L821.6 148.7L805.5 153.3L772.9 164.3M710.1 28.8L713 43.5L716.5 86.3M910.9 267.1L973.5 260.8L983.8 260.9L988.4 261.3L992.7 261.3L996.5 261.3L999.7 260.9M773.3 310.7L772.6 284.7L772.5 281.3L772.4 279L772.3 277.8L772.1 276.7L771.9 275.5L771.7 275L771.6 274.7L771.5 274.5L771.4 274.3L771.3 274.1L771.2 274L771 273.8L770.8 273.7L770.5 273.5L770.3 273.4L770.1 273.4L769.8 273.3L769.6 273.3L769.4 273.3L768 273.3L766.2 273.3L763.3 273.3L760.1 273.3L718.4 270.8L613.9 264M876.8 46.2L877.8 32.5L888.2 13.2L890.3 7L890.7 0.9L889.9 -8.3L885.8 -26M78.9 327.1L-53 325.8L-64.6 326M195.2 454.2L192.2 454.3L185.5 455.1L153.6 459.2L119.2 466.1L70.4 475.5L60.9 477.3L17.7 484.2L-1.3 487.1L-8.2 488L-23.4 488L-38.5 487.8L-63.8 485.3L-85.4 482.8L-97.8 481.1L-110.7 479.1L-113.8 478.8L-131.1 477L-153.4 473.9L-157.2 473.2L-205 467.5L-211.5 466.8L-234.8 464.6L-262 461.4L-270.8 460.5L-278.2 459.7L-287.2 458.2L-307.7 456.3L-320 456.6L-333.6 457.3L-345.7 458.5L-357.2 459M236.7 452.6L239.1 452.3L240.5 451.5L241.4 450.9L243.5 449.2L245.2 447.3L245.6 446.8L247.3 444L248.3 441L248.5 437.9L247.1 431.8L242.2 424.1L240.4 421.2L222.1 402.8L219.7 397.8L218.8 395L218.2 391.8L218.3 389.8L218.9 387.4L219.5 386L220.8 384.2L222.1 383.2L224.5 381.2L227.6 379.1L232.1 377.2L238.8 374.6L245.7 372.4L252.6 369.8L257.9 366.4L262.4 362.4L273.1 348.1L285.5 328.8L301.2 298.6L313.5 277.7L326.4 252.3M414.1 237.6L424.4 231.2L430.1 229.1L437.3 226.3L458.2 220.9L492.2 211.7L520.6 205.5L540.2 202.4L559.2 199.2L611.7 189.2L633.5 184.5L664 179.9L675.9 169.4M195.9 479.3L189.6 495.5L184.4 512.1L180.4 529.1L179.3 534.7L179.1 556.8L180.9 579L184.5 600.8L187.3 616.7L189 632.6L189.6 648.7L189 664.8L186.6 679.8L168.8 743.3L149.8 801.8L143.4 821.4L138.6 838.4M461.2 458.4L445.7 470.5L433.9 478.6L407.7 497.9L382.7 514.3L371 522.9L359.8 531.4L350.1 539.5L347.8 541.5L340.9 545.5M281.6 462L275.6 458.2L269.4 455L262.9 452.2L249.1 448.1L245.2 447.3L234.1 445.1M927 502.4L898.6 517.8L880.3 527.6L861.2 535L839.2 542.4L794.6 556L755 571.1L737.7 579.7L724.8 588L714.7 596.3L708 602.8L701.5 610.7L694.4 621L680.8 643.9L676.2 650.5L670.9 656.1L663.8 660.7M526.4 74L529.3 67.3L540.2 42L549 19.6L557.4 -3.3L564.2 -22L568.1 -32.7M526.4 74L498.5 59.6L448.4 46.7L385.2 48.3M385.2 48.3L359.1 48.1L321.8 48.6L272.5 47.3L231.6 44.1L217.6 43.1L188.5 40.4L167.9 38.7L157.8 38M157.8 38L146.4 51.4L143 55.4L135.8 65.7L120.6 86.2M793.5 348.7L796 354.6L798.7 361.1L799.3 362.7L799.7 364L800 365.5L800.2 367.2L800.3 371L799.5 378.9L797.3 390M210 161.3L216 75M263.6 133.9L266.9 101.8L271.6 60.6L272.5 47.3M490.9 89.3L498.5 59.6M561.3 130.6L557.6 130.5L551.9 131L546.3 131.9L540.4 132.8L531.5 134.2L521 136.4L513.4 137.1L502.7 137.3L490.1 137.6L476.2 137.2L471 137.4L465.5 137.2L462.9 136.6L461.2 135.1L460.4 133.9L459.8 132.2L460 121.1L459.9 106.1L458.7 94.4M561.3 130.6L559.8 122.1L559.4 118.1L559.5 112.6L559.7 103.1L560.9 91.5M762.8 112.7L751 93.4M747.5 124.7L762.8 112.7L766.9 109L770.5 105.1L773.8 101.2L776.5 97.9L777.8 96.2L778.7 94.6L779.6 92.9L780.2 91.3L781.1 88.8L781.7 86.9L781.7 84M1011.7 246.4L1001.2 233.2L965.3 189.2L954 175.1L950.3 171.1L947.1 167.4L942.6 161.8L939.2 156.9L931.3 144.3L919.4 124.7L898.4 95.2L896.1 92.1L873.5 59.1L870.3 54.6L867.5 50M671.2 230.2L671.1 229.7L665.3 189.1L664 179.9M580.5 358.6L579.2 352.5L577.5 345.5L574.2 330.7L573.3 324.8L572 310.6M614.9 343.6L609.9 343.6L600.2 343.2L590.3 342.3L586 342.3L584.4 342.7L582.6 343.3L577.5 345.5L572.4 347.9L558 353.4L542.6 359.4M617 355.3L612.5 355.1L605.4 354.5L597.8 354.3L594.7 354.2L592.5 354.3L590.7 354.6L586.5 356.1L580.5 358.6L569.2 363.7L564.2 365.6L557.1 368.7L543.4 373.1M695.2 310.9L695.4 347.9M686 391.3L677.6 392L669.1 392.9L667 392.9L664.5 393.1L663.6 393.2L662.9 393.2L662.7 393.2L662.5 393.2L662.3 393.1L662 393L661.8 393L661.5 392.8L661.2 392.7L661 392.5L660.8 392.3L660.6 392L660.4 391.6L660.2 391.2L659.9 390.4L659.6 389.4L659.2 388.1L658.1 384.2L656 375.6L647.1 340.1M913.7 204.9L910.9 267.1L910.6 290.3M94.5 190.3L102.5 190.7L114.6 193.7L119.7 195.6L128.4 201.3L134.5 204.3L152.7 208.9L166 213.4L181.4 218.7L192 220.7L202.1 221.2L213.7 218.8L223.3 217.3L239.3 217.7L264 220.4L270.3 223.4L276.8 228.9L284.9 235.9L288 239.9L287.9 243.1M96.5 316.7L115.6 279.5M138.8 303.8L122.2 276.6L121.9 276.2L121.7 276L121.3 275.7L120.9 275.6L120.6 275.6L120.2 275.5L119.7 275.5L119.2 275.7L118.7 275.8L118.4 275.9L118 276.2L117.6 276.6L116.6 277.9L115.6 279.5M217.3 446.1L209.5 447.4L202 450.2L195.2 454.2M280.5 592.1L264.6 574.8L252.6 563L241.4 553.8L225.8 544.1L215.3 539.9L203.4 535.9L190 531.5L180.4 529.1M779.6 198.8L775.4 198.2L762 196.7L750.1 195.5L738.5 194.5L731.4 194.1L725.2 193.8L721.6 193.5L720.1 193.2L718.1 192.8L714.7 191.9L711.5 190.9L708.5 189.7M875.8 310.9L898.3 311L915.8 311.4L943 311.9L961.9 312.7L971.5 312.7L980.7 312L1003.1 311.5L1014.3 310.4L1025.9 309.1L1050.6 306.1M394.2 295.2L402.9 326.1L404.9 342.6L407.4 357.2L410.4 366.2L413.9 370.6L417.2 376.1L420 384L421.5 391.3L426.5 406.4L428.1 410.6L429.7 412.3L431.8 414.1L435 415.2L444.6 418.4L463.4 422.6L480.1 423.7L492.3 424.9L505 426.1L511.6 425.9L525.1 424.3L530.5 424.5M831.6 52.2L840 51.8L846.6 51.6L867.5 50M903.8 447.8L855.4 449.9L820 451.7L799.4 454.9L788.5 456.6M258.1 174L254.2 181.5L249.9 186L239.4 192.4L224.6 199L212 201.4L203.8 200.5L191.6 198.8M96.2 34.9L136.6 52.1L139 53.3L143 55.4M552.9 86.1L597.3 80.2L616.6 76.8L634.6 74.9L645.3 74.1L656.1 72.3L662 71.3L663.9 71L664.8 70.9L665.8 70.9L667.1 71L668.3 71.2L669.4 71.6L670.1 72L670.7 72.4L671.2 72.9L672.5 74.5M615.1 127.8L610.8 130.5L608.6 131.4L606.5 131.9L600.2 131.9L594.2 132L581.3 131.5L561.3 130.6M505.3 271.1L502.1 255.6L497.7 236.8M1019.7 442.2L1015.3 440.8L1006.7 440.8L995.3 440.9L980.3 441.8L966.2 442.6L919 446.3L903.8 447.8M721.6 193.5L721.9 225M788.5 456.6L770.6 452.5L768.1 452.3L765 452L760.8 452.2L754.4 452.9L749.1 453.8L742.3 455.6M788.5 456.6L779.4 459.4L774 460.4L768.1 460.7L760.9 460.2L754.1 458.9L747.5 457.5L742.3 455.6M612.2 308.5L616.1 308.6L619.7 309.2L622.2 309.5L625 309.5L629.2 309.4L654 311.5L672.7 311.6L695.2 310.9L773.3 310.7L816.9 309.7M281.6 462L292.7 466.1L300.9 468.4L315 469.2L326.1 467.9L348.9 463.7L368.1 461.1L380.3 459.9M430.3 458.5L431.9 462.2L433.5 467L434 471.6L433.9 478.6M326.4 252.3L335.4 249.1L341.7 247L346.7 245.5L351.4 244.4L357.7 243.6L372.1 242.8L390.7 241L401.5 239.6L414.1 237.6M633.4 140.5L677 82M236.7 450L240.5 451.5L248 454.3L254.6 456.4L261.3 458.2L268 459.8L270.4 460.2M652.6 454.2L621.8 458.9L598.5 459.7L562.3 459.3L550.5 458.9M131.4 241.5L146.8 246.6L154.3 247.7L169.8 246.9L182 245.8L191 244.3L202.6 239.4L213.3 234.7L217.2 231.9L220.8 226.3L223.3 217.3M831.6 52.2L829.7 48.2L828 44.7L826.4 41.6L823.7 37L820.5 32.4L817.5 28.6L816.2 26.9L815 25.6L813.5 24.4L812 23.5L809.9 22.4L808.1 21.7L804.2 20.3L799.3 18.7M195.9 479.3L202.1 467.8L206 462.7L210.9 458.5L216.6 455.5L222.9 453.8M203.9 158.2L198.8 166.3L187.6 169.7L184.3 169.6L160.6 166.3L157.5 166.3M192.2 454.3L195.3 456.5L197.6 459.6L198.7 463.2L198.6 467.1L195.9 479.3M380.3 459.9L398 459.9L430.3 458.5L461.2 458.4M895.4 97.8L898.4 95.2M887.6 104.1L895.4 97.8M855.9 133L874.1 116.5L879.8 111L887.6 104.1M139.4 379.6L140.8 374.3L141 368.9L140.6 366.3L140.4 364.5L138.8 359.8L135.6 355.6L109.2 327M855.8 652.4L876.4 634.1L888.3 622.8L904.9 608.3L929.1 586.1M270.4 460.2L274.8 461L281.6 462M896.5 291.7L910.6 290.3M816.9 309.7L833.7 310.7L875.8 310.9M84.3 308.6L78.9 327.1L72.4 349.2L71 355.6"/>
+<path class="r-sec" d="M436.8 734.6L434.5 720.4L425.5 690.8L414.1 661.2L407.4 638.4L398 614.2L389.8 597.8L387.9 593.8L385.2 588.5L374.9 573.5L362.5 556.9L347.8 541.5L332 527.7L303.7 503.3L275.7 480.6L262.9 469.9M222.1 439.5L212.2 434.3L203.9 429.4L195.9 424.8M231.8 456.3L233.7 455.9L235.4 454.9L236.5 453.5M195.9 424.8L202 431.9L207.3 437.5L211.7 440.5L216.8 443.9M234.1 445.1L232.3 443.1L230 441.5L227.5 440.3L224.9 439.7L222.1 439.5M216.8 443.9L217.1 445L217.3 446.1L218.3 448.5L219.7 450.6L221.3 452.3L222.9 453.8L225.6 455.2L228.6 456.1L231.8 456.3M340.9 545.5L354.2 559.9L360.9 569L371.3 584.2L380.9 599.8L390.4 619.9L397.5 639.7L404.8 664.9L416.8 701.3L420.8 711.8L425.2 722.7L425.9 726.6L427.9 736.4M222.1 439.5L219.2 440.3L218.1 441.1L217.5 441.8L217 442.8L216.8 443.9M236.5 453.5L236.7 452.6L236.7 451.7L236.7 450M236.7 450L235.6 447.4L234.1 445.1M266.1 483.6L281.4 494.6L294.2 504.5L314.7 520.7L324.7 530.2L332.8 537.8L340.9 545.5M195.9 424.8L186.6 415L178.4 407.3L172.1 402.2L153.8 388.4L139.4 379.6L124 372.5L114.9 368.4L101.6 363.7L88.4 359.4L71 355.6L61.9 354.4L50.9 353L38.4 352.4L8.6 351L-13.3 350.2L-63.6 348.2L-81.4 347.1L-97 346.4L-168.1 344.9L-209.7 343.8L-212.3 343.7L-234.2 343.1L-247.6 343L-270.2 342.8L-301.5 342.8L-333.8 341.5L-382.3 340.7L-423.4 339.7L-444.4 339.2L-471.1 338.6L-504.7 338.8L-509.6 337.8L-533.7 332.1L-547.6 326.9L-568.4 313.4L-573.4 309L-617.6 249.9M262.9 469.9L248.8 460.5L236.5 453.5M231.8 456.3L266.1 483.6"/>
+<path class="r-main" d="M550.5 458.9L544.5 448.3L530.5 424.5L501.1 379.4L479 343.8L464.2 319.3L443.3 284.5L414.1 237.6L399.1 218.1L392.6 210.8L388.6 206.6L383.2 202.1L374.7 197.5L365.6 194.3L357.2 192.2L317.8 183.7L276.4 176.4L267.1 174.8L258.1 174L226.7 167.1L218.2 164.6L210 161.3L203.9 158.2L199.3 155.8L193.6 152.5L189.2 148.7L184.2 143.7L176.7 135.8L169.4 126L164.1 116.4L161.9 110.9L160.4 104.6L159.1 98.1L157.4 86.9L157.3 75.3L156.8 56.5L156.9 54.6L157.8 38M663.8 660.7L653.8 647L627 611.8L612.3 583.5L605.1 568.4L602.4 562.9L557.3 472.9L550.5 458.9"/>
+<g class="m-labels"><text class="rl rl-main" dy="-10"><textPath href="#rl0" startOffset="50%" text-anchor="middle">Avenue Hassan II</textPath></text><text class="rl rl-sec" dy="-6"><textPath href="#rl1" startOffset="34%" text-anchor="middle">Av. Sidi Mohamed Ben Abdellah</textPath></text><text class="rl rl-res" dy="-6"><textPath href="#rl2" startOffset="50%" text-anchor="middle">Av. Ibn Hazm</textPath></text><text class="hood" x="581.6" y="108.1" text-anchor="middle">Marchan</text><text class="hood" x="184" y="627.1" text-anchor="middle">Iberia</text><g class="poi"><circle cx="396.8" cy="439.3" r="6"/><text x="382.8" y="446.3" text-anchor="end">Hôpital Italien</text></g><g class="poi"><circle cx="530.4" cy="289.9" r="6"/><text x="544.4" y="296.9" text-anchor="start">Lycée Zineb Nafzaouia</text></g><g class="poi"><circle cx="620" cy="527.8" r="6"/><text x="620" y="559.8" text-anchor="middle">Sidi Bouarrakia</text></g><g class="poi edge"><circle cx="932.8" cy="379.4" r="6"/><text x="918.8" y="386.4" text-anchor="end">Jardins de la Mendoubia</text></g><g class="poi edge"><circle cx="914.4" cy="527.8" r="6"/><text x="900.4" y="534.8" text-anchor="end">Église Saint‑André</text></g><g class="poi edge"><circle cx="256" cy="319.4" r="6"/><text x="242" y="326.4" text-anchor="end">Aswak Plaza</text></g></g>
+<g class="pin" transform="translate(458.6 339.6)">
+<circle class="pin-ring" r="44"/>
+<path class="pin-body" d="M0 0c-4-14-22-22-22-40a22 22 0 0 1 44 0c0 18-18 26-22 40z"/>
+<circle class="pin-dot" cy="-40" r="8"/>
+</g>
+<g class="chip" transform="translate(458.6 369.6)">
+<rect x="-128" y="0" width="256" height="40" rx="8"/>
+<circle cx="-106" cy="20" r="5"/>
+<text x="-92" y="27">Laboratoire Merchan</text>
+</g>
+<g class="scale" transform="translate(32 640)"><path d="M0 -6V0H177.2V-6"/><text x="187.2" y="0">200 m</text></g>
+<g class="north" transform="translate(920 640)"><circle r="18"/><path d="M0 -10L6 6L0 2L-6 6Z"/><text y="-24" text-anchor="middle">N</text></g>
+</svg>
+<!--/MAP-->
+        <a class="map-open" href="https://www.google.com/maps/search/?api=1&query=35.7855451,-5.8204674" target="_blank" rel="noopener">Ouvrir dans Google Maps <i class="ph ph-arrow-up-right"></i></a>
+        <figcaption class="map-credit">Plan © contributeurs OpenStreetMap</figcaption>
+      </figure>
+    </div>
+
+    <div class="callback">
+      <div class="callback-intro">
+        <h3 class="h-sec">Être rappelé</h3>
+        <p>Laissez votre numéro, l'accueil vous rappelle pour fixer l'heure du prélèvement. Aucun paiement en ligne.</p>
+      </div>
+      <form class="form" id="form" novalidate>
+        <div class="field">
+          <label for="name">Nom complet</label>
+          <input id="name" name="name" autocomplete="name" placeholder="Fatima Zahra Benali" required aria-describedby="name-err">
+          <span class="err" id="name-err" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="tel">Téléphone</label>
+          <input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="06 12 34 56 78" required aria-describedby="tel-err">
+          <span class="err" id="tel-err" aria-live="polite"></span>
+        </div>
+        <fieldset class="field">
+          <legend>Lieu du prélèvement</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="where" value="labo" checked><span><i class="ph ph-flask"></i>Au laboratoire</span></label>
+            <label class="choice"><input type="radio" name="where" value="domicile"><span><i class="ph ph-house-line"></i>À domicile</span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="msg">Analyses prescrites <span class="meta">(facultatif)</span></label>
+          <textarea id="msg" name="msg" rows="3" placeholder="Bilan thyroïdien, glycémie"></textarea>
+        </div>
+        <button class="btn primary" type="submit">Réserver mon prélèvement</button>
+        <p class="reassure meta"><i class="ph ph-shield-check"></i>Aucun paiement en ligne. Vos coordonnées servent uniquement à vous rappeler.</p>
+        <div class="done" id="done" role="status"><i class="ph ph-check-circle"></i><span>Demande enregistrée pour la démonstration. À la mise en ligne, elle sera transmise à l'accueil du laboratoire.</span></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <a href="#top" class="logo"><svg aria-hidden="true"><use href="#mark"/></svg>Laboratoire Merchan</a>
+      <p class="ar-name">مختبر مرشان للتحاليل الطبية</p>
+    </div>
+    <div class="f-grid">
+      <div>
+        <h4>Le laboratoire</h4>
+        <p style="max-width:21rem">Laboratoire d'analyses médicales à Tanger : prélèvements, biologie médicale et résultats expliqués par le biologiste.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Avenue Hassan II, Résidence Rouaim<br>Merchan, Tanger 90000</li>
+          <li><a class="mono" href="tel:+212539939920">05 39 93 99 20</a></li>
+          <li>Lundi au vendredi, 07:30 à 19:00</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Analyses</h4>
+        <ul>
+          <li><a href="#analyses">Hématologie</a></li>
+          <li><a href="#analyses">Biochimie</a></li>
+          <li><a href="#analyses">Hormonologie</a></li>
+          <li><a href="#analyses">Grossesse et bilan prénatal</a></li>
+          <li><a href="#questions">Questions fréquentes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© <span id="yr"></span> Laboratoire Merchan d'analyses médicales · Photo Unsplash</span>
+      <nav aria-label="Informations légales"><button type="button" data-legal>Mentions légales</button><button type="button" data-legal>Confidentialité</button></nav>
+    </div>
+  </div>
+</footer>
+
+<dialog id="legal" aria-labelledby="legal-title">
+  <button class="close" type="button" aria-label="Fermer"><i class="ph ph-x"></i></button>
+  <h2 id="legal-title">Mentions légales</h2>
+  <p>Laboratoire Merchan d'analyses médicales, avenue Hassan II, Résidence Rouaim, Tanger 90000. Raison sociale : <span class="todo">{{à compléter}}</span> · ICE : <span class="todo">{{à compléter}}</span></p>
+  <h3>Confidentialité</h3>
+  <p>Les données du formulaire servent uniquement à vous rappeler. Elles sont traitées conformément à la loi marocaine sur la protection des données personnelles. Déclaration CNDP : <span class="todo">{{numéro à compléter}}</span></p>
+</dialog>
+
+<!-- TODO: the 05 number is a landline; replace with the lab's WhatsApp mobile number -->
+<a class="wa" href="https://wa.me/212539939920" target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
+
+<script>
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Open status. Only weekday hours are confirmed (07:30 to 19:00, Morocco time)
+  try{
+    const parts = new Intl.DateTimeFormat('en-GB',{timeZone:'Africa/Casablanca',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    const get = t => parts.find(p => p.type === t).value;
+    const day = get('weekday'), mins = (+get('hour')) * 60 + (+get('minute'));
+    const weekend = day === 'Sat' || day === 'Sun';
+    const open = !weekend && mins >= 450 && mins < 1140;
+    document.getElementById('openText').textContent = weekend ? 'Samedi et dimanche : appelez pour les horaires' : open ? 'Ouvert maintenant, jusqu\'à 19:00' : 'Fermé, ouvre à 07:30';
+    document.getElementById('dot').classList.toggle('closed', !open);
+  }catch(e){}
+
+  // Mobile menu
+  const toggle = document.getElementById('toggle'), panel = document.getElementById('panel');
+  function setMenu(open){
+    panel.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', e => { if(e.key === 'Escape') setMenu(false); });
+
+  // Current section in the nav
+  const links = [...document.querySelectorAll('.menu a')];
+  const spy = new IntersectionObserver(es => es.forEach(e => {
+    if(e.isIntersecting) links.forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + e.target.id));
+  }), {rootMargin:'-45% 0px -50% 0px'});
+  ['analyses','laboratoire','deroulement','questions','contact'].forEach(id => spy.observe(document.getElementById(id)));
+
+  // Tagline: words light up one at a time in reading order (rAF throttled)
+  const tl = document.getElementById('tagline');
+  tl.innerHTML = tl.innerHTML.split(/(<br>)/).map(seg => seg === '<br>' ? seg : seg.split(' ').filter(Boolean).map(w => '<span class="w">' + w + '</span>').join(' ')).join('');
+  const words = [...tl.querySelectorAll('.w')];
+  if(reduced){ words.forEach(w => w.classList.add('on')); }
+  else{
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const r = tl.getBoundingClientRect(), vh = innerHeight;
+      const p = Math.min(1, Math.max(0, (vh * .8 - r.top) / (r.height + vh * .3)));
+      const n = Math.round(p * words.length);
+      words.forEach((w, i) => w.classList.toggle('on', i < n));
+    };
+    addEventListener('scroll', () => { if(!ticking){ ticking = true; requestAnimationFrame(update); } }, {passive:true});
+    update();
+  }
+
+  // Callback form: inline validation, calm confirmation
+  const form = document.getElementById('form');
+  const fields = {
+    name: {el: form.name, err: document.getElementById('name-err'), check: v => v.trim().length >= 3 || 'Indiquez votre nom et prénom'},
+    tel: {el: form.tel, err: document.getElementById('tel-err'), check: v => /^(?:\+212|0)[5-7]\d{8}$/.test(v.replace(/[\s.]/g,'')) || 'Numéro invalide. Exemple : 06 12 34 56 78'}
+  };
+  function validate(f){
+    const res = f.check(f.el.value), ok = res === true;
+    f.el.setAttribute('aria-invalid', !ok);
+    f.err.textContent = ok ? '' : res;
+    return ok;
+  }
+  Object.values(fields).forEach(f => f.el.addEventListener('blur', () => { if(f.el.value) validate(f); }));
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const ok = Object.values(fields).map(validate).every(Boolean);
+    if(!ok){ Object.values(fields).find(f => f.el.getAttribute('aria-invalid') === 'true').el.focus(); return; }
+    const btn = form.querySelector('button[type=submit]');
+    btn.setAttribute('aria-busy','true');
+    // TODO: connect to the lab (email, WhatsApp Business or a form service) before going live
+    setTimeout(() => { btn.removeAttribute('aria-busy'); document.getElementById('done').classList.add('show'); form.reset(); }, 600);
+  });
+
+  // Legal dialog
+  const dlg = document.getElementById('legal');
+  document.querySelectorAll('[data-legal]').forEach(b => b.addEventListener('click', () => dlg.showModal()));
+  dlg.querySelector('.close').addEventListener('click', () => dlg.close());
+  dlg.addEventListener('click', e => { if(e.target === dlg) dlg.close(); });
+
+  try{ localStorage.removeItem('merchan-palette'); }catch(e){}
+</script>
+</body>
+</html>
